@@ -39,10 +39,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unprocessed_lead.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="unprocessed_lead.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/unprocessed_lead.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="8" selection-start="510" selection-end="510" vertical-scroll-proportion="0.15121952">
+            <state line="14" column="8" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="3" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.905691">
               <folding />
             </state>
           </provider>
@@ -67,8 +76,8 @@
         <option value="$PROJECT_DIR$/app/views/dashboard/leads/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/dashboard/style.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/dashboard/variables.scss" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/models/unprocessed_lead.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -569,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="17" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.19837399">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboard/leads/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="10" selection-start="150" selection-end="150" vertical-scroll-proportion="-3.625">
@@ -585,7 +587,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/unprocessed_lead.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="8" selection-start="510" selection-end="510" vertical-scroll-proportion="0.15121952">
+        <state line="14" column="8" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="3" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.905691">
           <folding />
         </state>
       </provider>

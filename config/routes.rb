@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'import_unprocessed_leads/s3_import'
+
   namespace :dashboard do
-  get 'leads/index'
+    root 'leads#index'
+    get 'leads/index'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

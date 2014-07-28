@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails urbanzeak-leads-processor: development" uuid="a870f541-237e-4cec-a180-c6e8d0adef42">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails urbanzeak-leads-processor: test" uuid="acb5c9b6-38df-4f99-9f9c-83f31d27c1ed">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

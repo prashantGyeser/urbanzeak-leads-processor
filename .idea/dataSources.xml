@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2766462350">
+    <data-source source="LOCAL" name="Rails urbanzeak-leads-processor: development" uuid="a870f541-237e-4cec-a180-c6e8d0adef42">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/urbanzeak_leads_processor_development</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedfeadf9bdf98df99</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails urbanzeak-leads-processor: test" uuid="acb5c9b6-38df-4f99-9f9c-83f31d27c1ed">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/urbanzeak_leads_processor_test</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedfeadf9bdf98df99</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

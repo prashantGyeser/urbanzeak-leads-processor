@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  namespace :dashboard do
+  get 'classifications/bayesian_processor'
+  end
+
+  namespace :dashboard do
+  get 'import_training_data/import_leads'
+  end
+
+  namespace :dashboard do
+  get 'import_training_data/import_non_leads'
+  end
+
+  namespace :dashboard do
+  get 'import_unprocessed_leads/s3_import'
+  end
+
   get 'import_unprocessed_leads/s3_import'
 
   namespace :dashboard do

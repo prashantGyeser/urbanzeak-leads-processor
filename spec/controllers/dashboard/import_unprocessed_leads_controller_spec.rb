@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ImportUnprocessedLeadsController, :type => :controller do
+RSpec.describe Dashboard::ImportUnprocessedLeadsController, :type => :controller do
 
   describe "GET s3_import" do
     it "returns http success" do

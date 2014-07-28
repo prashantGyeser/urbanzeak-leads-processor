@@ -41,6 +41,10 @@ gem 'pg'
 
 gem 'annotate',        group: :development
 
+gem 'aws-sdk', '~> 1.0'
+
+gem 'stuff-classifier'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end

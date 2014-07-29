@@ -32,7 +32,7 @@ class BayesianClassifier
         end
       end
 
-      unprocessed_lead.destroy
+      #unprocessed_lead.destroy
       puts "The processed count is: #{processed_count}"
       processed_count = processed_count + 1
     end

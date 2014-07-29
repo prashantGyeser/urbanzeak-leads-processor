@@ -20,7 +20,7 @@
     <data-source source="LOCAL" name="Rails urbanzeak-leads-processor: production" uuid="1575dc63-b616-4b08-b83e-6c1b3d3de9aa">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1/urbanzeak_leads_processor_test</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/urbanzeak_leads_processor_production</jdbc-url>
       <user-name>postgres</user-name>
       <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedfeadf9bdf98df99</user-password>
       <libraries />

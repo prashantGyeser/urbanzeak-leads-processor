@@ -6,7 +6,7 @@ class BayesianClassifier
   def process_all_unprocessed_leads
     bayes_classifier = StuffClassifier::Bayes.new("Leads or Nonleads")
 
-    leads = TrainingLead.all
+    training_leads = TrainingLead.all
     training_leads.each do |training_lead|
       bayes_classifier.train(:lead, training_lead.tweet_body)
     end

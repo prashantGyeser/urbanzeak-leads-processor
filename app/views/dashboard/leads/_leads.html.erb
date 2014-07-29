@@ -1,10 +1,11 @@
 <% @leads.each do |lead| %>
     <div class="p-t-20 p-b-15 b-b b-grey">
-        <div class="post overlap-left-10">
+        <div class="overlap-left-10">
           <div class="info-wrapper small-width inline">
-            <div class="info text-black ">
-                  <p>
-              <%= lead.tweet_body %>
+            <div class="info text-black m-l-35" style="width: 100%">
+              <p>
+                <%= lead.tweet_body %>
+                <span class="pull-right"><button type="button" class="btn btn-danger btn-cons" id="<%= lead.id %>">Not Lead</button></span>
               </p>
             </div>
             <div class="clearfix"></div>

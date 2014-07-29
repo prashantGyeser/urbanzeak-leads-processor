@@ -11,6 +11,8 @@
 
   <%= stylesheet_link_tag    'dashboard/application', media: 'all', 'data-turbolinks-track' => true %>
 
+  <%= csrf_meta_tags %>
+
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -51,5 +53,23 @@
 </div>
 <!-- END PAGE -->
 <!-- END CONTAINER -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+
+  $('.btn').click(function(e){
+      e.preventDefault();
+      selected_lead_id = $(this).attr('id');
+      button_clicked = $(this);
+      $.post("dashboard/leads/move_tweet_to_nonleads", { lead_id: selected_lead_id} )
+              .done(function(data){
+                  console.log("Done");
+                  button_clicked.parent().parent().parent().parent().parent().parent().hide();
+      })
+
+  });
+</script>
+
 </body>
 </html>

@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   namespace :dashboard do
     root 'leads#index'
     get 'leads/index'
+    post 'leads/move_tweet_to_nonleads'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

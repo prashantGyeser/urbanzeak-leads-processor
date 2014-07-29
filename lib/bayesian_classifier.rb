@@ -22,8 +22,9 @@ class BayesianClassifier
     unprocessed_leads = UnprocessedLead.all
 
     processed_count = 1
-
+    puts "Beginning classification"
     unprocessed_leads.each do |unprocessed_lead|
+      puts "Item classification start"
       if UrlChecker.does_not_contains_url?(unprocessed_lead.tweet_body)
         if LocationChecker.preferred_location_available?(unprocessed_lead.user_location)
           if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead

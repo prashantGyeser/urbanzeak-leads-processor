@@ -6,4 +6,7 @@
   <data-source source="LOCAL" name="Rails urbanzeak-leads-processor: test" uuid="acb5c9b6-38df-4f99-9f9c-83f31d27c1ed">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source source="LOCAL" name="Rails urbanzeak-leads-processor: production" uuid="1575dc63-b616-4b08-b83e-6c1b3d3de9aa">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>

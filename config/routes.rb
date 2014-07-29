@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'import_unprocessed_leads/s3_import'
   end
 
-  get 'import_unprocessed_leads/s3_import'
+  #get 'import_unprocessed_leads/s3_import'
 
   namespace :dashboard do
     root 'leads#index'

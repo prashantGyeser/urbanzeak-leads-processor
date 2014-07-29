@@ -22,3 +22,7 @@ development:
 test:
   <<: *default
   database: urbanzeak_leads_processor_test
+
+production:
+  <<: *default
+  database: urbanzeak_leads_processor_production

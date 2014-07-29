@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:alexandru/stuff-classifier.git
+  remote: git://github.com/alexandru/stuff-classifier.git
   revision: 548e800da3eaa97562b097b4fb8db3bab6de7ba1
   specs:
     stuff-classifier (0.5)

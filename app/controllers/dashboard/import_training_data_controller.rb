@@ -16,7 +16,7 @@ class Dashboard::ImportTrainingDataController < ApplicationController
       csv_file = object.read
       csv_text = CSV.parse(csv_file)
       csv_text.each do |row|
-        tweet_body = row[0]
+        tweet_body = row[1]
         TrainingLead.create(:tweet_body => tweet_body)
       end
       object.delete
@@ -40,7 +40,7 @@ class Dashboard::ImportTrainingDataController < ApplicationController
       csv_file = object.read
       csv_text = CSV.parse(csv_file)
       csv_text.each do |row|
-        tweet_body = row[0]
+        tweet_body = row[1]
         TrainingNonLead.create(:tweet_body => tweet_body)
       end
       object.delete

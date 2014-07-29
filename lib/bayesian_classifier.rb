@@ -19,11 +19,10 @@ class BayesianClassifier
       bayes_classifier.train(:nonlead, training_nonlead.tweet_body)
     end
     puts "Finished negative training"
-    unprocessed_leads = UnprocessedLead.all
 
     processed_count = 1
     puts "Beginning classification"
-    unprocessed_leads.each do |unprocessed_lead|
+    UnprocessedLead.find_each do |unprocessed_lead|
       puts "Item classification start"
       if UrlChecker.does_not_contains_url?(unprocessed_lead.tweet_body)
         if LocationChecker.preferred_location_available?(unprocessed_lead.user_location)

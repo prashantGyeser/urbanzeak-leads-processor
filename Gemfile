@@ -43,7 +43,7 @@ gem 'annotate',        group: :development
 
 gem 'aws-sdk', '~> 1.0'
 
-gem 'stuff-classifier'
+gem 'stuff-classifier', :git => 'git@github.com:alexandru/stuff-classifier.git'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'

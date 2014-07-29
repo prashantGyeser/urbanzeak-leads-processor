@@ -25,11 +25,11 @@ class BayesianClassifier
     UnprocessedLead.find_each do |unprocessed_lead|
       puts "Item classification start"
       if UrlChecker.does_not_contains_url?(unprocessed_lead.tweet_body)
-        #if LocationChecker.preferred_location_available?(unprocessed_lead.user_location)
+        if LocationChecker.preferred_location_available?(unprocessed_lead.user_location)
           if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead
             Lead.create(tweet_poster_screen_name: unprocessed_lead.tweet_poster_screen_name, tweet_user_image: unprocessed_lead.tweet_user_image, tweet_body: unprocessed_lead.tweet_body, gnip_matching_rules: unprocessed_lead.gnip_matching_rules, user_location: unprocessed_lead.user_location)
           end
-        #end
+        end
       end
 
       #unprocessed_lead.destroy

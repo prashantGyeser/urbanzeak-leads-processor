@@ -1,4 +1,5 @@
 require 'data_parser'
+require 'csv'
 
 class CsvImporter
   def save_rows_in_file_to_database

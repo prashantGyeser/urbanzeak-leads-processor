@@ -19,9 +19,7 @@ class Dashboard::ImportUnprocessedLeadsController < Dashboard::ApplicationContro
     # retrieve the objects
     bucket.objects.each do |object|
 
-      csv_file = object.read
-      CsvImporter.save_rows_in_file_to_database(csv_file)
-      object.delete
+      CsvImporter.new.delay.save_rows_in_file_to_database(object)
     end
   end
 end

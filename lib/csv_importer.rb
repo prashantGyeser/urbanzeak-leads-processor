@@ -18,12 +18,15 @@ class CsvImporter
       csv_file = object.read
       count = 1
       #CsvImporter.new.delay.save_rows_in_file_to_database(object)
-      rows = CSV.parse(csv_file)
-      rows.each do |row|
-        count = count +1
-        tweet_hash = DataParser.convert_row_into_hash(row)
-        UnprocessedLead.create(tweet_hash)
+      if !!CSV.parse(csv_file)
+        rows = CSV.parse(csv_file)
+        rows.each do |row|
+          count = count +1
+          tweet_hash = DataParser.convert_row_into_hash(row)
+          UnprocessedLead.create(tweet_hash)
+        end
       end
+
     end
   end
 

@@ -50,6 +50,8 @@ gem 'stuff-classifier', :git => 'git://github.com/alexandru/stuff-classifier.git
 # Background processor
 gem 'delayed_job_active_record'
 
+gem 'will_paginate', '~> 3.0'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end

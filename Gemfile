@@ -52,6 +52,8 @@ gem 'delayed_job_active_record'
 
 gem 'will_paginate', '~> 3.0'
 
+gem 'smarter_csv'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end

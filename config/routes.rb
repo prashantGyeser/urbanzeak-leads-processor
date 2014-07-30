@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'import_manually_checked_leads/import'
+
   namespace :dashboard do
   get 'classifications/bayesian_processor'
   end

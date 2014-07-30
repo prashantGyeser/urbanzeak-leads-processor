@@ -23,21 +23,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bayesian_classifier.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/bayesian_classifier.rb">
+      <file leaf-file-name="import_manually_checked_leads_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/lib/import_manually_checked_leads_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31240657" vertical-offset="351" max-vertical-offset="1280">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="non_lead_tweet_in_city.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/non_lead_tweet_in_city.rb">
+      <file leaf-file-name="manually_checked_leads_csv_sample.csv" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/fixtures/manually_checked_leads_csv_sample.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
-              <caret line="0" column="24" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="500">
+              <caret line="0" column="119" selection-start-line="0" selection-start-column="119" selection-end-line="0" selection-end-column="119" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="import_manually_checked_leads.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/import_manually_checked_leads.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.23916294" vertical-offset="0" max-vertical-offset="669">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -58,7 +68,6 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/dashboard/variables.scss" />
         <option value="$PROJECT_DIR$/app/models/unprocessed_lead.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/spec/lib/csv_importer_spec.rb" />
         <option value="$PROJECT_DIR$/spec/lib/data_parser_spec.rb" />
         <option value="$PROJECT_DIR$/.rvmrc" />
         <option value="$PROJECT_DIR$/lib/data_parser.rb" />
@@ -71,8 +80,6 @@
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/import_unprocessed_leads_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/classifications_controller.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/lib/csv_importer.rb" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/import_training_data_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/dashboard/leads/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dashboard/leads/_leads.html.erb" />
@@ -83,6 +90,12 @@
         <option value="$PROJECT_DIR$/db/migrate/20140730135412_remove_tweet_id_from_leads.rb" />
         <option value="$PROJECT_DIR$/app/models/lead.rb" />
         <option value="$PROJECT_DIR$/lib/bayesian_classifier.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/lib/csv_importer.rb" />
+        <option value="$PROJECT_DIR$/spec/lib/csv_importer_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/lib/import_manually_checked_leads_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/fixtures/manually_checked_leads_csv_sample.csv" />
+        <option value="$PROJECT_DIR$/lib/import_manually_checked_leads.rb" />
       </list>
     </option>
   </component>
@@ -133,6 +146,56 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="urbanzeak-leads-processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="urbanzeak-leads-processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="urbanzeak-leads-processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="urbanzeak-leads-processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="urbanzeak-leads-processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="urbanzeak-leads-processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="urbanzeak-leads-processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fixtures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -396,7 +459,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21906225" sideWeight="0.6708075" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23827825" sideWeight="0.6708075" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -433,30 +496,11 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/data_parser.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="420">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/lead.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="620">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/location_checker.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="320">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/keyword_checker.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="520">
@@ -576,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/lib/csv_importer_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="220">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/lib/data_parser_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="540">
@@ -661,14 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6412556" vertical-offset="631" max-vertical-offset="1340">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboard/classifications/bayesian_processor.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="669">
@@ -743,7 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
           <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,7 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
           <caret line="3" column="164" selection-start-line="3" selection-start-column="164" selection-end-line="3" selection-end-column="164" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -762,18 +789,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/csv_importer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6031008" vertical-offset="11" max-vertical-offset="780">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/lead.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14947683" vertical-offset="0" max-vertical-offset="669">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -781,7 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2690583" vertical-offset="0" max-vertical-offset="669">
           <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,8 +813,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bayesian_classifier.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31240657" vertical-offset="351" max-vertical-offset="1280">
+        <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1280">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="1380">
+          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/csv_importer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="840">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/lib/csv_importer_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.029895367" vertical-offset="0" max-vertical-offset="669">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/lib/import_manually_checked_leads_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/fixtures/manually_checked_leads_csv_sample.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="500">
+          <caret line="0" column="119" selection-start-line="0" selection-start-column="119" selection-end-line="0" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/import_manually_checked_leads.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23916294" vertical-offset="0" max-vertical-offset="669">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>

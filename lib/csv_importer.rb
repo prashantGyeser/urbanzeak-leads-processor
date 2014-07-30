@@ -12,26 +12,28 @@ class CsvImporter
 
     # get the bucket
     bucket = s3.buckets['gnip_cleaned_output']
-
     # retrieve the objects
     bucket.objects.each do |object|
       csv_file = object.read
       count = 1
+      malformed_count = 1
       #CsvImporter.new.delay.save_rows_in_file_to_database(object)
-      if !!CSV.parse(csv_file)
+      begin
         rows = CSV.parse(csv_file)
         rows.each do |row|
+          puts "Importing row: #{count}"
           count = count +1
           tweet_hash = DataParser.convert_row_into_hash(row)
           UnprocessedLead.create(tweet_hash)
         end
+      rescue CSV::MalformedCSVError
+        puts "Malformed csv row: #{malformed_count}"
+        malformed_count = malformed_count + 1
       end
 
     end
   end
 
   handle_asynchronously :save_rows_in_file_to_database
-
-
 
 end

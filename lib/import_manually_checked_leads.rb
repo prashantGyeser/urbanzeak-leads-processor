@@ -33,7 +33,7 @@ class ImportManuallyCheckedLeads
           end
         end
       #rescue CSV::MalformedCSVError
-        puts "Malformed csv row"
+        #puts "Malformed csv row"
       #end
       object.delete
     end

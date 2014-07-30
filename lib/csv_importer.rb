@@ -19,8 +19,9 @@ class CsvImporter
       malformed_count = 1
       #CsvImporter.new.delay.save_rows_in_file_to_database(object)
       begin
-        rows = CSV.parse(csv_file)
-        rows.each do |row|
+        #rows = CSV.parse(csv_file)
+        #rows.each do |row|
+        CSV.foreach(csv_file) do |row|
           puts "Importing row: #{count}"
           count = count +1
           tweet_hash = DataParser.convert_row_into_hash(row)

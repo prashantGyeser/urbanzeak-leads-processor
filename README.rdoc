@@ -1,28 +1,36 @@
-== README
+# Command to connect to the amazon server
+First run chmod 600 key_file_name.pem
+ssh -i /directory/keyname.pem ubuntu@ec2-xx.compute-1.amazonaws.com
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Server name: ec2-54-210-103-140.compute-1.amazonaws.com
 
-Things you may want to cover:
+Current server connection details
+ssh -l ubuntu -i /home/prashant/Downloads/lsi_key.pem ec2-54-210-103-140.compute-1.amazonaws.com
 
-* Ruby version
+ssh -l USERNAME_HERE -i .ssh/yourkey.pem public-ec2-host
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+New amazon s3 processor server
+ssh -l ubuntu -i /home/prashant/Downloads/processor_key_pair.pem ec2-54-84-194-24.compute-1.amazonaws.com
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+s3 reader account details
+Access Key Id: AKIAJQBGIJU5QJKHTUEQ
+Secret Access Key: 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
+
+To fix the invalid ASCII issue run
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+bundle
+
+Installing gsl
+sudo apt-get install gsl-bin libgsl0-dev
+
+
+
+# Query to delete all the records in a table using sql
+
+In this sample "unprocessed_leads" is the table name
+
+sql = "DELETE FROM unprocessed_leads"
+ActiveRecord::Base.connection.execute(sql)

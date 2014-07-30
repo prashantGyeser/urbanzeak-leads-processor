@@ -20,12 +20,15 @@ class BayesianClassifier
     end
     puts "Finished negative training"
 
+    total_tweets_nyc = 0
+
     processed_count = 1
     puts "Beginning classification"
     UnprocessedLead.find_each do |unprocessed_lead|
-      puts "Item classification start"
       if UrlChecker.does_not_contains_url?(unprocessed_lead.tweet_body)
         if LocationChecker.preferred_location_available?(unprocessed_lead.user_location)
+          total_tweets_nyc = total_tweets_nyc + 1
+          puts "The total tweets in NYC are: #{total_tweets_nyc}"
 
           if KeywordChecker.positive_operator_in_tweet?(unprocessed_lead.tweet_body)
             UncheckedLead.create(tweet_poster_screen_name: unprocessed_lead.tweet_poster_screen_name, tweet_user_image: unprocessed_lead.tweet_user_image, tweet_body: unprocessed_lead.tweet_body, gnip_matching_rules: unprocessed_lead.gnip_matching_rules, user_location: unprocessed_lead.user_location)
@@ -41,7 +44,6 @@ class BayesianClassifier
       end
 
       #unprocessed_lead.destroy
-      puts "The processed count is: #{processed_count}"
       processed_count = processed_count + 1
     end
 

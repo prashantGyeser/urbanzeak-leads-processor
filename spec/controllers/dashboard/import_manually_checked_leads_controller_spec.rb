@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ImportManuallyCheckedLeadsController, :type => :controller do
+RSpec.describe Dashboard::ImportManuallyCheckedLeadsController, :type => :controller do
 
   describe "GET import" do
     it "returns http success" do

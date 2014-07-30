@@ -1,5 +1,3 @@
-
-
 require 'csv'
 require 'csv_importer'
 

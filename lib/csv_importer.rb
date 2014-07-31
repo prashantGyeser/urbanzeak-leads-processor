@@ -42,7 +42,7 @@ class CsvImporter
         #
         # end
       rescue CSV::MalformedCSVError => e
-        puts e
+        ImporterError.create(file_name: aws_file_key, error: e.inspect)
         puts "Malformed csv row: #{malformed_count}"
         malformed_count = malformed_count + 1
       end

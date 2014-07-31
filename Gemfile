@@ -54,6 +54,10 @@ gem 'will_paginate', '~> 3.0'
 
 gem 'smarter_csv'
 
+# Application monitoring
+gem 'honeybadger'
+
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end

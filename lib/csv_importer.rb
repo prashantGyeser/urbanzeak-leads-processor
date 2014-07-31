@@ -25,7 +25,9 @@ class CsvImporter
           puts "Importing row: #{count}"
           count = count +1
           tweet_hash = DataParser.convert_row_into_hash(row)
-          UnprocessedLead.create(tweet_hash)
+          UnprocessedLead.create(tweet_poster_screen_name: tweet_hash[:tweet_poster_screen_name], tweet_user_image: tweet_hash[:tweet_user_image], tweet_body: tweet_hash[:tweet_body], gnip_matching_rules: tweet_hash[:gnip_matching_rules], user_location: tweet_hash[:user_location] )
+
+
         end
       rescue CSV::MalformedCSVError
         puts "Malformed csv row: #{malformed_count}"

@@ -13,13 +13,16 @@ class CsvImporter
 
     # get the bucket
     bucket = s3.buckets['gnip_cleaned_output']
+
+    count = 1
+    malformed_count = 1
+
     # retrieve the objects
     puts "Before iterating over the objects in amazon"
     bucket.objects.each do |object|
       aws_file_key = object.key
       csv_file = object.read
-      count = 1
-      malformed_count = 1
+
       #CsvImporter.new.delay.save_rows_in_file_to_database(object)
       puts "Before the error loop"
       begin

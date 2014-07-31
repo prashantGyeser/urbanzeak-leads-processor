@@ -34,3 +34,9 @@ In this sample "unprocessed_leads" is the table name
 
 sql = "DELETE FROM unprocessed_leads"
 ActiveRecord::Base.connection.execute(sql)
+
+# Deleting all the files from a bucket
+s3cmd ls s3://my-bucket/  | awk '{print $4}' | xargs s3cmd del
+
+# Viewing live logs on heroku for a worker process
+heroku logs -p worker -t

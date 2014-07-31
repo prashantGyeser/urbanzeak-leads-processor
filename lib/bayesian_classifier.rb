@@ -12,6 +12,12 @@ class BayesianClassifier
     training_leads.each do |training_lead|
       bayes_classifier.train(:lead, training_lead.tweet_body)
     end
+
+    training_manually_checked_leads = Lead.all
+    training_manually_checked_leads.each do |manually_checked_lead|
+      bayes_classifier.train(:lead, manually_checked_lead.tweet_body)
+    end
+
     puts "Finished positive training"
     puts "Beginning negative training"
     non_leads = TrainingNonLead.all

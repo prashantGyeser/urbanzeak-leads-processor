@@ -39,7 +39,8 @@ class CsvImporter
         #
         #
         # end
-      rescue CSV::MalformedCSVError
+      rescue CSV::MalformedCSVError => e
+        puts e
         puts "Malformed csv row: #{malformed_count}"
         malformed_count = malformed_count + 1
       end

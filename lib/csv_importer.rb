@@ -26,7 +26,8 @@ class CsvImporter
         rows = CSV.parse(csv_file)
         rows.each_with_index do |row, index|
           ImporterStatus.create(file_name: aws_file_key, number_of_rows_imported: index)
-          puts "Processing row: #{1}"
+          puts "Processing row: #{count}"
+          count = count +1
           tweet_hash = DataParser.convert_row_into_hash(row)
           UnprocessedLead.create(tweet_hash)
         end
@@ -42,7 +43,7 @@ class CsvImporter
         #
         # end
       rescue CSV::MalformedCSVError => e
-        ImporterError.create(file_name: aws_file_key, error: e.inspect)
+        ImporterError.create(file_name: aws_file_key, error_message_generated: e.inspect)
         puts "Malformed csv row: #{malformed_count}"
         malformed_count = malformed_count + 1
       end

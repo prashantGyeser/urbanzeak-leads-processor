@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140730140214) do
+ActiveRecord::Schema.define(version: 20140731080025) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(version: 20140730140214) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
+  create_table "importer_statuses", force: true do |t|
+    t.string   "file_name"
+    t.integer  "number_of_rows_imported"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "leads", force: true do |t|
     t.string   "tweet_poster_screen_name"

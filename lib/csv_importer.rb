@@ -16,6 +16,7 @@ class CsvImporter
     # retrieve the objects
     puts "Before iterating over the objects in amazon"
     bucket.objects.each do |object|
+      aws_file_key = object.key
       csv_file = object.read
       count = 1
       malformed_count = 1
@@ -23,7 +24,8 @@ class CsvImporter
       puts "Before the error loop"
       begin
         rows = CSV.parse(csv_file)
-        rows.each do |row|
+        rows.each_with_index do |row, index|
+          ImporterStatus.create(file_name: aws_file_key, number_of_rows_imported: index)
           puts "Processing row: #{1}"
           tweet_hash = DataParser.convert_row_into_hash(row)
           UnprocessedLead.create(tweet_hash)

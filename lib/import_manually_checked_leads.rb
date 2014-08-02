@@ -26,7 +26,7 @@ class ImportManuallyCheckedLeads
           lead[:gnip_matching_rules] = row[6]
           lead[:gnip_matching_rules] = row[7]
 
-          if row[2].downcase == 'yes'
+          if row[3].downcase == 'yes'
             puts "Adding lead"
             Lead.create(lead)
           else

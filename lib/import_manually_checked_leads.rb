@@ -27,8 +27,10 @@ class ImportManuallyCheckedLeads
           lead[:gnip_matching_rules] = row[7]
 
           if row[2].downcase == 'yes'
+            puts "Adding lead"
             Lead.create(lead)
           else
+            puts "Adding non lead"
             TrainingNonLead.create(tweet_body: row[3])
           end
         end

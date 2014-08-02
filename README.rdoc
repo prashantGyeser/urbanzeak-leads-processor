@@ -40,3 +40,12 @@ s3cmd ls s3://my-bucket/  | awk '{print $4}' | xargs s3cmd del
 
 # Viewing live logs on heroku for a worker process
 heroku logs -p worker -t
+
+
+# Collecting tweets from gnip
+nohup curl --compressed -v -uprashant@urbanzeak.com "https://stream.gnip.com:443/accounts/Urbanzeak/publishers/twitter/streams/track/prod.json" -uprashant@urbanzeak.com:KHELDAR@123 > gnip_output7.json &
+
+# Removing all the files in a s3 bucket using s3cmd
+s3cmd ls s3://gnip_cleaned_output/  | awk '{print $4}' | xargs s3cmd del
+
+Bucket to cleanup: gnip_cleaned_output

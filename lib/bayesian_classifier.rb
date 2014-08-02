@@ -37,8 +37,6 @@ class BayesianClassifier
           puts "The total tweets in NYC are: #{total_tweets_nyc}"
 
           if KeywordChecker.positive_operator_in_tweet?(unprocessed_lead.tweet_body)
-            UncheckedLead.create(tweet_poster_screen_name: unprocessed_lead.tweet_poster_screen_name, tweet_user_image: unprocessed_lead.tweet_user_image, tweet_body: unprocessed_lead.tweet_body, gnip_matching_rules: unprocessed_lead.gnip_matching_rules, user_location: unprocessed_lead.user_location)
-          else
             if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead
               UncheckedLead.create(tweet_poster_screen_name: unprocessed_lead.tweet_poster_screen_name, tweet_user_image: unprocessed_lead.tweet_user_image, tweet_body: unprocessed_lead.tweet_body, gnip_matching_rules: unprocessed_lead.gnip_matching_rules, user_location: unprocessed_lead.user_location)
             else

@@ -47,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/lib/import_manually_checked_leads.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5427136" vertical-offset="156" max-vertical-offset="810">
-              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -823,7 +823,7 @@
     <entry file="file://$PROJECT_DIR$/lib/import_manually_checked_leads.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5427136" vertical-offset="156" max-vertical-offset="810">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding />
         </state>
       </provider>

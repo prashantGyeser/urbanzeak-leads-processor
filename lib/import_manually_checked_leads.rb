@@ -31,7 +31,7 @@ class ImportManuallyCheckedLeads
             Lead.create(lead)
           else
             puts "Adding non lead"
-            TrainingNonLead.create(tweet_body: row[3])
+            TrainingNonLead.create(tweet_body: lead[:tweet_body])
           end
         end
       #rescue CSV::MalformedCSVError

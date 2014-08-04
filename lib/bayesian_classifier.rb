@@ -34,7 +34,7 @@ class BayesianClassifier
       if UrlChecker.does_not_contains_url?(unprocessed_lead.tweet_body)
         if LocationChecker.preferred_location_available?(unprocessed_lead.user_location)
           total_tweets_nyc = total_tweets_nyc + 1
-          puts "The total tweets in NYC are: #{total_tweets_nyc}"
+          puts "Total tweets: #{total_tweets_nyc}"
 
 
           if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead

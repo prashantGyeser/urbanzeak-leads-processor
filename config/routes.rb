@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   namespace :dashboard do
+  get 'home/index'
+  end
+
+  namespace :dashboard do
   get 'import_manually_checked_leads/import'
   end
 

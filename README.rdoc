@@ -43,9 +43,17 @@ heroku logs -p worker -t
 
 
 # Collecting tweets from gnip
-nohup curl --compressed -v -uprashant@urbanzeak.com "https://stream.gnip.com:443/accounts/Urbanzeak/publishers/twitter/streams/track/prod.json" -uprashant@urbanzeak.com:KHELDAR@123 > gnip_output10.json &
+nohup curl --compressed -v -uprashant@urbanzeak.com "https://stream.gnip.com:443/accounts/Urbanzeak/publishers/twitter/streams/track/prod.json" -uprashant@urbanzeak.com:KHELDAR@123 > gnip_output_with_geo_location_2.json &
 
 # Removing all the files in a s3 bucket using s3cmd
 s3cmd ls s3://gnip_cleaned_output/  | awk '{print $4}' | xargs s3cmd del
 
 Bucket to cleanup: gnip_cleaned_output
+
+# Get all the processes
+ps -ef
+
+# S3 Reader
+Username: data_collector_reader
+Access Key ID: AKIAJKLLYAVEZZEN24UQ
+Secret Access Key: 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

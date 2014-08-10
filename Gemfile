@@ -54,6 +54,8 @@ gem 'will_paginate', '~> 3.0'
 
 gem 'smarter_csv'
 
+gem 'sidekiq'
+
 # Application monitoring
 gem 'honeybadger'
 

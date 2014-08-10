@@ -59,6 +59,9 @@ gem 'sidekiq'
 # Application monitoring
 gem 'honeybadger'
 
+# Web interface for sidekiq
+gem 'sinatra', '>= 1.3.0', :require => nil
+
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'

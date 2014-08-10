@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   namespace :dashboard do
   get 'home/index'
@@ -30,6 +32,8 @@ Rails.application.routes.draw do
     get 'leads/index'
     post 'leads/move_tweet_to_nonleads'
   end
+
+  mount Sidekiq::Web => '/sidekiq'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

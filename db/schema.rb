@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731081146) do
+ActiveRecord::Schema.define(version: 20140810094233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,6 +79,29 @@ ActiveRecord::Schema.define(version: 20140731081146) do
     t.datetime "updated_at"
   end
 
+  create_table "tweets", force: true do |t|
+    t.text     "body"
+    t.integer  "twitter_user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "twitter_oauth_keys", force: true do |t|
+    t.integer  "user_id"
+    t.string   "consumer_key"
+    t.string   "consumer_secret"
+    t.string   "oauth_token"
+    t.string   "oauth_token_secret"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "twitter_users", force: true do |t|
+    t.string   "screen_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "unchecked_leads", force: true do |t|
     t.string   "tweet_poster_screen_name"
     t.string   "tweet_user_image"
@@ -105,6 +128,12 @@ ActiveRecord::Schema.define(version: 20140731081146) do
     t.string   "user_location_country_code"
     t.text     "gnip_matching_rules"
     t.boolean  "processed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

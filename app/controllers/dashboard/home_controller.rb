@@ -10,7 +10,7 @@ class Dashboard::HomeController < Dashboard::ApplicationController
     #   TweetCollector.perform_async(user.id)
     # end
 
-    @unprocessed_leads = UnprocessedLead.all
+    @status = LocationChecker.preferred_location_available?("NY/NJ")
 
 
 

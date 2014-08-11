@@ -1,7 +1,1 @@
-<% @unprocessed_leads.each do |unprocessed_lead|  %>
-    <% if !unprocessed_lead.user_location.nil? %>
-        <%= unprocessed_lead.tweet_poster_screen_name %> | <%= unprocessed_lead.user_location %><br/>
-        <br/>
-    <% end %>
-
-<% end %>
+<%= @status %>

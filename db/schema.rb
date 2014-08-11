@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140810094233) do
+ActiveRecord::Schema.define(version: 20140810170035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -113,23 +113,13 @@ ActiveRecord::Schema.define(version: 20140810094233) do
   end
 
   create_table "unprocessed_leads", force: true do |t|
-    t.string   "tweet_id"
-    t.string   "tweet_poster_user_id"
     t.string   "tweet_poster_screen_name"
-    t.string   "tweet_poster_profile_link"
-    t.string   "tweet_poster_display_name"
     t.string   "tweet_user_image"
-    t.text     "tweet_user_summary"
-    t.integer  "tweet_user_friends_count"
-    t.integer  "tweet_user_followers_count"
-    t.datetime "tweet_post_time"
     t.text     "tweet_body"
     t.string   "user_location"
-    t.string   "user_location_country_code"
-    t.text     "gnip_matching_rules"
-    t.boolean  "processed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|

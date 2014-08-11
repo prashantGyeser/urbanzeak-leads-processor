@@ -10,7 +10,7 @@ require "active_support/core_ext"
 
 gnip_search_url = 'https://search.gnip.com/accounts/Urbanzeak/search/prod.json'
 username = 'prashant@urbanzeak.com'
-password = 'KHELDAR@123'
+password =
 
 
 payload = {:query => 'from:718_Kidd0', :publisher => 'twitter'}

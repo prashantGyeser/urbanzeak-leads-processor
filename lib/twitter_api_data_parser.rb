@@ -1,13 +1,16 @@
 class TwitterApiDataParser
 
-  def self.parse_tweet_stream_data(tweet_object)
+  def self.parse_tweet_stream_data(tweet_object, user_id)
+    puts "It is getting into the parser....."
+
     tweet_hash = {}
 
-    tweet_hash[:twitter_user_screen_name] = tweet.user.screen_name
-    tweet_hash[:twitter_user_image_url] = (tweet.user.profile_image_url || '')
-    tweet_hash[:tweet_text] = tweet.text
-    tweet_hash[:twitter_user_location] = (tweet.user.location || '')
+    tweet_hash[:tweet_poster_screen_name] = tweet_object.user.screen_name
+    tweet_hash[:tweet_body] = tweet_object.text
+    tweet_hash[:user_location] = tweet_object.user.location
+    tweet_hash[:user_id] = user_id
 
+    puts "It is getting out of the parser....."
     return tweet_hash
 
 

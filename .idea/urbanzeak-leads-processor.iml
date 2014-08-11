@@ -127,21 +127,26 @@
     <orderEntry type="library" scope="PROVIDED" name="actionview (v4.1.4, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v4.1.4, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.1.4, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activerecord-import (v0.5.0, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.1.4, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.6, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="annotate (v2.6.5, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v5.0.1.20140414130214, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="aws-sdk (v1.49.0, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="better_errors (v1.1.0, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.7.2, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="buftok (v0.2.0, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.6.2, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="celluloid (v0.15.2, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.0, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.0.1, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.3.0, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.7.1, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="connection_pool (v2.0.0, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cookiejar (v0.3.2, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="daemons (v1.1.9, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="delayed_job (v4.0.2, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="delayed_job_active_record (v4.0.1, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.5, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />

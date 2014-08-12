@@ -57,3 +57,10 @@ ps -ef
 Username: data_collector_reader
 Access Key ID: AKIAJKLLYAVEZZEN24UQ
 Secret Access Key: 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
+
+# Helpful commands
+To initialize a return value, if it is a class use something like
+tweet = Twitter::Tweet.new
+
+Then this initialized class can be used to find all the methods assocaited with it using
+tweet.methods

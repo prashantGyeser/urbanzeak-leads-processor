@@ -1,4 +1,5 @@
 require 'twitter'
+require 'pp'
 
 # Client initialization
 client = Twitter::REST::Client.new do |config|
@@ -14,5 +15,30 @@ end
 # end
 #
 
-puts client.search("sushi", geocode: "40.790434,-73.305140,25mi" ).count
+client.search("sushi", geocode: "40.790434,-73.305140,25mi" ).collect do |tweet|
+
+  tweet_hash = {}
+
+  #pp tweet.to_h
+
+  tweet_hash[:tweet_poster_screen_name] = tweet.user.screen_name
+  tweet_hash[:tweet_body] = tweet.text
+  if tweet.user.location.to_s.empty?
+    tweet_hash[:user_location] = ''
+  else
+    tweet_hash[:user_location] = tweet.user.location
+  end
+
+  tweet_hash[:latlon_city_name_used_to_search] = "NYC"
+
+  pp tweet_hash
+
+  puts ""
+  puts ""
+  puts ""
+  puts ""
+
+  #puts "#{tweet.user.screen_name}: #{tweet.text}"
+
+end
 #puts client.search("sushi"} ).inspect

@@ -1,0 +1,12 @@
+1.  Move the search code into a seperate class
+2.  Make the user oauth token dynamic
+3.  Make the search keywords dynamic
+4.  Test and see how many keywords can be called in a search
+5.  Integrate the frontend server with this server so that whenever a user is created on the front end it comes back here
+        and kicks off the search process
+6.  Set the search to work on a schedule, start off with 12 hours
+7.  Add error handling to the application
+8.  Pass the results into the classifier in real time
+9.  Associate a user email and keyword list with each search result
+10. Decide on a color scheme for the front end
+11. Modify the frontend dashboard and site based on the color scheme

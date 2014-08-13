@@ -1,3 +1,4 @@
+
 # == Schema Information
 #
 # Table name: unprocessed_leads
@@ -13,7 +14,3 @@
 #  city_latlon_generate_for :string(255)
 #  tweet_id                 :string(255)
 #
-
-class UnprocessedLead < ActiveRecord::Base
-  belongs_to :user
-end

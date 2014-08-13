@@ -15,7 +15,7 @@ end
 # end
 #
 
-client.search("sushi", geocode: "40.790434,-73.305140,25mi" ).collect do |tweet|
+client.search("sushi OR food", geocode: "40.790434,-73.305140,25mi" ).collect do |tweet|
 
   tweet_hash = {}
 
@@ -29,7 +29,7 @@ client.search("sushi", geocode: "40.790434,-73.305140,25mi" ).collect do |tweet|
     tweet_hash[:user_location] = tweet.user.location
   end
 
-  tweet_hash[:latlon_city_name_used_to_search] = "NYC"
+  tweet_hash[:city_latlon_generate_for] = "NYC"
 
   pp tweet_hash
 

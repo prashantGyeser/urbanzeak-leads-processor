@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140810170035) do
+ActiveRecord::Schema.define(version: 20140813171822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cities", force: true do |t|
+    t.string   "city_name"
+    t.string   "city_code"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "user_id"
+  end
 
   create_table "delayed_jobs", force: true do |t|
     t.integer  "priority",   default: 0, null: false
@@ -46,6 +62,13 @@ ActiveRecord::Schema.define(version: 20140810170035) do
     t.datetime "updated_at"
   end
 
+  create_table "keywords", force: true do |t|
+    t.string   "word"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "leads", force: true do |t|
     t.string   "tweet_poster_screen_name"
     t.string   "tweet_poster_profile_link"
@@ -63,6 +86,15 @@ ActiveRecord::Schema.define(version: 20140810170035) do
     t.text     "tweet_body"
     t.string   "user_location"
     t.text     "gnip_matching_rules"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "oauth_tokens", force: true do |t|
+    t.integer  "user_id"
+    t.string   "oauth_token"
+    t.string   "oauth_secret"
+    t.string   "provider"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -120,12 +152,22 @@ ActiveRecord::Schema.define(version: 20140810170035) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "city_latlon_generate_for"
+    t.string   "tweet_id"
+  end
+
+  create_table "user_categories", force: true do |t|
+    t.integer  "category_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "city_id"
   end
 
 end

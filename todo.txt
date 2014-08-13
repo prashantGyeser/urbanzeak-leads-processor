@@ -10,3 +10,7 @@
 9.  Associate a user email and keyword list with each search result
 10. Decide on a color scheme for the front end
 11. Modify the frontend dashboard and site based on the color scheme
+
+
+Add a link between the city and a user. EAch user can have only one city
+

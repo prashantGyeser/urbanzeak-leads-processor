@@ -1,16 +1,19 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: cities
 #
 #  id         :integer          not null, primary key
-#  email      :string(255)
+#  city_name  :string(255)
+#  city_code  :string(255)
+#  latitude   :float
+#  longitude  :float
 #  created_at :datetime
 #  updated_at :datetime
-#  city_id    :integer
+#  user_id    :string(255)
 #
 
 require 'rails_helper'
 
-RSpec.describe User, :type => :model do
+RSpec.describe City, :type => :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end

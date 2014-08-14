@@ -64,8 +64,12 @@ gem 'sinatra', '>= 1.3.0', :require => nil
 
 gem 'tweetstream'
 
+# Env config info
+gem "figaro"
 
 gem 'twitter'
+
+gem 'iron_mq'
 
 # Gem to import records without the delay in Activerecord
 gem 'activerecord-import'
@@ -74,10 +78,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem "better_errors"
   gem "binding_of_caller"
-  gem 'webmock'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'faker'
 end
 
 gem 'rails_12factor',        group: :production
+gem 'webmock',        group: :test

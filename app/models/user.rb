@@ -11,6 +11,6 @@
 
 class User < ActiveRecord::Base
   has_many :unprocessed_leads
-  has_many :cities
-  has_many :categories
+  has_many :user_cities
+  has_many :user_categories
 end

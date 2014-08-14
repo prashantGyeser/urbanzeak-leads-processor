@@ -1,13 +1,14 @@
 # == Schema Information
 #
-# Table name: categories
+# Table name: user_cities
 #
 #  id         :integer          not null, primary key
-#  name       :string(255)
+#  city_id    :integer
+#  user_id    :integer
 #  created_at :datetime
 #  updated_at :datetime
 #
 
-class Category < ActiveRecord::Base
-  has_many :keywords
+class UserCity < ActiveRecord::Base
+  belongs_to :user
 end

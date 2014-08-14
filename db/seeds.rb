@@ -102,3 +102,6 @@ barbecue_keywords.each do |barbecue_keyword|
   Keyword.create(word: barbecue_keyword, category_id: barbecue_category.id)
 end
 
+
+
+City.create(city_name: 'New York', city_code: 'NYC', latitude: 42.711559, longitude: -74.864380)

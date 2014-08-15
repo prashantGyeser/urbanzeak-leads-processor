@@ -6,8 +6,8 @@ class TwitterSearch
 
     # Client initialization
     client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = "P1akA2LS1B6VHWiPzfyhDh24u"
-      config.consumer_secret     = "eOuMGTiqXkqalOdGxYdxZiCGL73H5mc43LlswxHsfW3FRIqRoj"
+      config.consumer_key        = ENV['TWITTER_KEY']
+      config.consumer_secret     = ENV['TWITTER_SECRET']
       config.access_token        = oauth_token.oauth_token
       config.access_token_secret = oauth_token.oauth_secret
     end

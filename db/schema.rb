@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140813190257) do
+ActiveRecord::Schema.define(version: 20140816164811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,6 +88,9 @@ ActiveRecord::Schema.define(version: 20140813190257) do
     t.text     "gnip_matching_rules"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "city_latlon_generate_for"
+    t.string   "tweet_id"
   end
 
   create_table "oauth_tokens", force: true do |t|
@@ -142,6 +145,9 @@ ActiveRecord::Schema.define(version: 20140813190257) do
     t.text     "gnip_matching_rules"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "city_latlon_generate_for"
+    t.string   "tweet_id"
   end
 
   create_table "unprocessed_leads", force: true do |t|

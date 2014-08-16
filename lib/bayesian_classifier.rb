@@ -32,20 +32,20 @@ class BayesianClassifier
     puts "Beginning classification"
     UnprocessedLead.find_each do |unprocessed_lead|
       if UrlChecker.does_not_contains_url?(unprocessed_lead.tweet_body)
-        if LocationChecker.preferred_location_available?(unprocessed_lead.user_location)
-          total_tweets_nyc = total_tweets_nyc + 1
-          puts unprocessed_lead.user_location
-          puts "Total tweets: #{total_tweets_nyc}"
 
+        total_tweets_nyc = total_tweets_nyc + 1
+        puts unprocessed_lead.user_location
+        puts "Total tweets: #{total_tweets_nyc}"
 
-          if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead
-            UncheckedLead.create(tweet_poster_screen_name: unprocessed_lead.tweet_poster_screen_name, tweet_user_image: unprocessed_lead.tweet_user_image, tweet_body: unprocessed_lead.tweet_body, gnip_matching_rules: unprocessed_lead.gnip_matching_rules, user_location: unprocessed_lead.user_location)
-          else
-            NonLeadTweetInCity.create(tweet_poster_screen_name: unprocessed_lead.tweet_poster_screen_name, tweet_user_image: unprocessed_lead.tweet_user_image, tweet_body: unprocessed_lead.tweet_body, gnip_matching_rules: unprocessed_lead.gnip_matching_rules, user_location: unprocessed_lead.user_location)
-          end
+        unprocessed_lead_attributes = unprocessed_lead.attributes
+        unprocessed_lead_attributes_without_id = unprocessed_lead_attributes.delete('id')
 
-
+        if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead
+          UncheckedLead.create(unprocessed_lead_attributes_without_id)
+        else
+          NonLeadTweetInCity.create(unprocessed_lead_attributes_without_id)
         end
+
       end
 
       #unprocessed_lead.destroy

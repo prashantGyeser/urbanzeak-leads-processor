@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
   has_many :unprocessed_leads
   has_many :user_cities
   has_many :user_categories
+  has_many :oauth_tokens
+
+  #validates :user_cities, :presence => true
+
 end

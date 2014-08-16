@@ -48,6 +48,9 @@ class BayesianClassifier
 
       end
 
+      unprocessed_lead.destroy
+
+
       #unprocessed_lead.destroy
       processed_count = processed_count + 1
     end

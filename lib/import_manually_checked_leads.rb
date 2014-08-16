@@ -19,15 +19,15 @@ class ImportManuallyCheckedLeads
         rows = CSV.parse(csv_file)
         rows.each do |row|
           lead = {}
-          lead[:tweet_poster_screen_name] = row[1]
-          lead[:tweet_body] = row[4]
-          lead[:user_location] = row[5]
-          lead[:gnip_matching_rules] = row[6]
-          lead[:gnip_matching_rules] = row[7]
+          #lead[:tweet_poster_screen_name] = row[3]
+          lead[:tweet_body] = row[2]
+          #lead[:user_location] = row[8]
+          #lead[:tweet_id] = row[0]
 
-          if row[3].downcase == 'yes'
+          if row[1].downcase == 'yes'
             puts "Adding lead"
-            Lead.create(lead)
+            #Lead.create(lead)
+            TrainingLead.create(:tweet_body => lead[:tweet_body])
           else
             puts "Adding non lead"
             TrainingNonLead.create(tweet_body: lead[:tweet_body])

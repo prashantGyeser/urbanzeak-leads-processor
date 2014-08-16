@@ -20,7 +20,6 @@ class ImportManuallyCheckedLeads
         rows.each do |row|
           lead = {}
           lead[:tweet_poster_screen_name] = row[1]
-          lead[:tweet_user_image] = row[2]
           lead[:tweet_body] = row[4]
           lead[:user_location] = row[5]
           lead[:gnip_matching_rules] = row[6]

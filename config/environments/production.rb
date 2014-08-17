@@ -79,4 +79,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Adding the lib directory to the autoload path to make sure rake can run
+  config.autoload_paths += %W(#{config.root}/lib)
+
 end

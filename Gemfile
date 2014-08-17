@@ -83,5 +83,9 @@ group :development, :test do
   gem 'faker'
 end
 
+group :test do
+  gem 'shoulda-matchers'
+end
+
 gem 'rails_12factor',        group: :production
 gem 'webmock',        group: :test

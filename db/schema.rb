@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140817110013) do
+ActiveRecord::Schema.define(version: 20140817115633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 20140817110013) do
     t.integer  "user_id"
     t.string   "city_latlon_generate_for"
     t.string   "tweet_id"
+    t.boolean  "sent"
   end
 
   create_table "non_lead_tweet_in_cities", force: true do |t|

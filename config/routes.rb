@@ -14,18 +14,8 @@ Rails.application.routes.draw do
   end
 
   namespace :dashboard do
-  get 'import_training_data/import_leads'
+  get 'import_training_data/import_data'
   end
-
-  namespace :dashboard do
-  get 'import_training_data/import_non_leads'
-  end
-
-  namespace :dashboard do
-  get 'import_unprocessed_leads/s3_import'
-  end
-
-  #get 'import_unprocessed_leads/s3_import'
 
   namespace :dashboard do
     root 'leads#index'

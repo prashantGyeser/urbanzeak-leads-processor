@@ -27,7 +27,8 @@ RSpec.describe ReturnAllRecordsAsHash do
                                       :tweet_body=>nil,
                                       :user_location=>nil,
                                       :city_latlon_generate_for=>nil,
-                                      :tweet_id=>nil}
+                                      :tweet_id=>nil
+                                  }
                               )
   end
 

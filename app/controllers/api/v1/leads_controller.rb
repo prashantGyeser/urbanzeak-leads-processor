@@ -4,10 +4,10 @@ class Api::V1::LeadsController < ApplicationController
 
   def index
 
-    @leads = ReturnAllRecordsAsHash.array_of_leads
+    leads = ReturnAllRecordsAsHash.array_of_leads
 
     respond_to do |format|
-      format.json { render :json => @leads }
+      format.json { render :json => leads }
     end
 
   end

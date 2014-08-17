@@ -13,7 +13,29 @@
 #  user_id                  :integer
 #  city_latlon_generate_for :string(255)
 #  tweet_id                 :string(255)
+#  status                   :boolean
 #
 
+require 'csv'
+
 class UncheckedLead < ActiveRecord::Base
+
+  def self.to_csv
+    CSV.generate do |csv|
+      csv << column_names
+      # all.each do |item|
+      #   csv << item.attributes.values_at(*column_names)
+      # end
+
+      find_each do |unchecked_lead|
+        if unchecked_lead.status != true
+          csv << unchecked_lead.attributes.values_at(*column_names)
+          unchecked_lead.status = true
+          unchecked_lead.save
+        end
+      end
+
+    end
+  end
+
 end

@@ -13,6 +13,7 @@
 #  user_id                  :integer
 #  city_latlon_generate_for :string(255)
 #  tweet_id                 :string(255)
+#  status                   :boolean
 #
 
 require 'rails_helper'

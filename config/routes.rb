@@ -1,6 +1,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+
   namespace :dashboard do
   get 'home/index'
   end
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
     root 'leads#index'
     get 'leads/index'
     post 'leads/move_tweet_to_nonleads'
+    get 'unchecked_leads/export_as_csv'
   end
 
   mount Sidekiq::Web => '/sidekiq'

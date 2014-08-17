@@ -1,7 +1,10 @@
+require 'return_all_records_as_hash'
+
 class Api::V1::LeadsController < ApplicationController
 
   def index
-    @leads = Lead.where.not(:send => true)
+
+    @leads = ReturnAllRecordsAsHash.array_of_leads
 
     respond_to do |format|
       format.json { render :json => @leads }

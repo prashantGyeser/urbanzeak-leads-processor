@@ -38,12 +38,12 @@ class BayesianClassifier
         puts "Total tweets: #{total_tweets_nyc}"
 
         unprocessed_lead_attributes = unprocessed_lead.attributes
-        unprocessed_lead_attributes_without_id = unprocessed_lead_attributes.delete('id')
+        unprocessed_lead_attributes.delete('id')
 
         if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead
-          UncheckedLead.create(unprocessed_lead_attributes_without_id)
+          UncheckedLead.create(unprocessed_lead_attributes)
         else
-          NonLeadTweetInCity.create(unprocessed_lead_attributes_without_id)
+          NonLeadTweetInCity.create(unprocessed_lead_attributes)
         end
 
       end

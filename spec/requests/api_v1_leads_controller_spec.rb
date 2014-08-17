@@ -26,3 +26,5 @@ RSpec.describe "leads api", :type => :request do
   end
 
 end
+
+# Lead.create(:tweet_poster_screen_name => "some_awesome_screename", :tweet_body => "this is a test tweet body", :user_id => 50, :user_location => "Some location", :city_latlon_generate_for => "NYC", :tweet_id => "3424332423423")

@@ -21,12 +21,15 @@ RSpec.describe ImportManuallyCheckedLeads do
 =end
 
 
-  it "should parse and store each row" do
+  it "should parse and store each row based on if it is a lead or a non lead" do
     import_manually_checked_leads = ImportManuallyCheckedLeads.new
-    results = import_manually_checked_leads.import_csv
+    import_manually_checked_leads.import_csv
 
-    expect(results[:tweet_poster_screen_name]).to eq "MarkLyman16"
+    leads_count = Lead.count
+    non_leads_count = TrainingNonLead.count
 
+    expect(leads_count).to eq 4
+    expect(non_leads_count).to eq 7
   end
 
 

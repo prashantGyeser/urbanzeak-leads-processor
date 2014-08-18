@@ -20,14 +20,16 @@ class ImportManuallyCheckedLeads
         rows = CSV.parse(csv_file, :headers => true)
         rows.each do |row|
 
-          lead_hash = {}
-
           row_hash = row.to_hash
-          row_hash.delete("is_lead")
+          is_lead = row_hash.delete("is_lead")
           row_hash.delete("status")
           row_hash.delete("id")
-          lead = Lead.create(row_hash)
-          return lead
+
+          if is_lead.downcase == "yes"
+            Lead.create(row_hash)
+          else
+            TrainingNonLead.create(tweet_body: row["tweet_body"])
+          end
 
         end
       rescue CSV::MalformedCSVError

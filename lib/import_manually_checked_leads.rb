@@ -35,8 +35,8 @@ class ImportManuallyCheckedLeads
       rescue CSV::MalformedCSVError
         puts "Malformed csv row"
       end
-      object.destroy
 
+      object.delete
       puts "Deleted manually checked lead file"
 
     end

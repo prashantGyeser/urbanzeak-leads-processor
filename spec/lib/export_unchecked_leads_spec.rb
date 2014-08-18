@@ -20,7 +20,7 @@ RSpec.describe ExportUncheckedLeads do
     export_unchecked_leads = ExportUncheckedLeads.new
     export_unchecked_leads.export
 
-    expect(Rails.root).to eq true
+    #expect(r).to eq true
 
   end
 

@@ -1,6 +1,7 @@
 require 'import_manually_checked_leads'
 
 RSpec.describe ImportManuallyCheckedLeads do
+=begin
 
   it "should import a csv file with invalid rows" do
     file = File.dirname(__FILE__) + '/../fixtures/manually_checked_leads_csv_sample.csv'
@@ -16,6 +17,9 @@ RSpec.describe ImportManuallyCheckedLeads do
     #expect(Lead.all.count).to eq 1
 
   end
+=end
+
+
 
 
 

@@ -35,7 +35,12 @@ class ImportManuallyCheckedLeads
       rescue CSV::MalformedCSVError
         puts "Malformed csv row"
       end
+      object.destroy
+
+      puts "Deleted manually checked lead file"
+
     end
+
   end
 
   #handle_asynchronously :import_csv

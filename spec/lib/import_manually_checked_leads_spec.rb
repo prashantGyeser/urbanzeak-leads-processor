@@ -1,3 +1,4 @@
+require 'rails_helper'
 require 'import_manually_checked_leads'
 
 RSpec.describe ImportManuallyCheckedLeads do
@@ -20,7 +21,13 @@ RSpec.describe ImportManuallyCheckedLeads do
 =end
 
 
+  it "should parse and store each row" do
+    import_manually_checked_leads = ImportManuallyCheckedLeads.new
+    results = import_manually_checked_leads.import_csv
 
+    expect(results[:tweet_poster_screen_name]).to eq "MarkLyman16"
+
+  end
 
 
 end

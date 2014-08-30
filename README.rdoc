@@ -64,3 +64,6 @@ tweet = Twitter::Tweet.new
 
 Then this initialized class can be used to find all the methods assocaited with it using
 tweet.methods
+
+Find qniue columns based on one column
+UncheckedLead.select(:tweet_poster_screen_name).map(&:tweet_poster_screen_name).uniq.count

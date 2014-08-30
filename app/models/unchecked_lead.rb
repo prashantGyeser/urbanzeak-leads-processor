@@ -20,6 +20,8 @@ require 'csv'
 
 class UncheckedLead < ActiveRecord::Base
 
+  validates_uniqueness_of :tweet_id, :scope => [:user_id]
+
   def self.to_csv
     CSV.generate do |csv|
       csv << column_names

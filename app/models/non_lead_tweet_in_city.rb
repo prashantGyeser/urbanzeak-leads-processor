@@ -16,4 +16,5 @@
 #
 
 class NonLeadTweetInCity < ActiveRecord::Base
+  validates_uniqueness_of :tweet_id, :scope => [:user_id]
 end

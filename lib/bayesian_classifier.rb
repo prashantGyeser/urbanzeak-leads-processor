@@ -31,22 +31,22 @@ class BayesianClassifier
     processed_count = 1
     puts "Beginning classification"
     UnprocessedLead.find_each do |unprocessed_lead|
-      if UrlChecker.does_not_contains_url?(unprocessed_lead.tweet_body)
 
-        total_tweets_nyc = total_tweets_nyc + 1
-        puts unprocessed_lead.user_location
-        puts "Total tweets: #{total_tweets_nyc}"
 
-        unprocessed_lead_attributes = unprocessed_lead.attributes
-        unprocessed_lead_attributes.delete('id')
+      total_tweets_nyc = total_tweets_nyc + 1
+      puts unprocessed_lead.user_location
+      puts "Total tweets: #{total_tweets_nyc}"
 
-        if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead
-          UncheckedLead.create(unprocessed_lead_attributes)
-        else
-          NonLeadTweetInCity.create(unprocessed_lead_attributes)
-        end
+      unprocessed_lead_attributes = unprocessed_lead.attributes
+      unprocessed_lead_attributes.delete('id')
 
+      if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead
+        UncheckedLead.create(unprocessed_lead_attributes)
+      else
+        NonLeadTweetInCity.create(unprocessed_lead_attributes)
       end
+
+
 
       unprocessed_lead.destroy
 

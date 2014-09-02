@@ -41,9 +41,27 @@ class BayesianClassifier
         unprocessed_lead_attributes.delete('id')
 
         if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead
-          UncheckedLead.create(unprocessed_lead_attributes)
+          unchecked_lead = UncheckedLead.create(unprocessed_lead_attributes)
+
+          if unchecked_lead.errors.full_messages.first == "Tweet has already been taken"
+            Honeybadger.notify(
+                :error_class   => "UncheckedLead Exists",
+                :error_message => "UncheckedLead Exists: #{unprocessed_lead[:tweet_id]}",
+                :parameters    => {user_id: unprocessed_lead[:user_id], tweet_id: unprocessed_lead[:tweet_id]}
+            )
+          end
+
         else
-          NonLeadTweetInCity.create(unprocessed_lead_attributes)
+          non_lead_tweet_in_city = NonLeadTweetInCity.create(unprocessed_lead_attributes)
+
+          if non_lead_tweet_in_city.errors.full_messages.first == "Tweet has already been taken"
+            Honeybadger.notify(
+                :error_class   => "NonLeadTweetInCity Exists",
+                :error_message => "NonLeadTweetInCity Exists: #{unprocessed_lead[:tweet_id]}",
+                :parameters    => {user_id: unprocessed_lead[:user_id], tweet_id: unprocessed_lead[:tweet_id]}
+            )
+          end
+
         end
 
       #end

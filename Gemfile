@@ -71,6 +71,9 @@ gem 'twitter'
 
 gem 'iron_mq'
 
+# datasift
+gem 'datasift'
+
 # Gem to import records without the delay in Activerecord
 gem 'activerecord-import'
 

@@ -1,0 +1,257 @@
+{
+    "hash":"8909a77e95de7d0cfcedfd6ddf12c47a",
+    "hash_type":"stream",
+    "id":"2c1532f823c1f4115dc1a08943a424e5",
+    "delivered_at":"Wed, 03 Sep 2014 10:23:07 +0000",
+    "interactions":[
+        {
+            "interaction":{
+                "schema":{
+                    "version":3
+                },
+                "source":"Twitter for iPhone",
+                "author":{
+                    "username":"asvprossi",
+                    "name":"d",
+                    "id":1369631252,
+                    "avatar":"http://pbs.twimg.com/profile_images/503283128308617216/5bN9d1Aj_normal.jpeg",
+                    "link":"https://twitter.com/asvprossi",
+                    "language":"en"
+                },
+                "type":"twitter",
+                "created_at":"Wed, 03 Sep 2014 10:05:55 +0000",
+                "received_at":1409738756.1898999,
+                "content":"dress code kys for making me wear this DUMB cardigan.... fuck spaghetti straps i do what i want i'm punk rock",
+                "id":"1e43351e4af0a380e074f04b6fb043da",
+                "link":"https://twitter.com/asvprossi/status/507107212880523264"
+            },
+            "klout":{
+                "score":46
+            },
+            "language":{
+                "tag":"en",
+                "tag_extended":"en",
+                "confidence":99
+            },
+            "twitter":{
+                "created_at":"Wed, 03 Sep 2014 10:05:55 +0000",
+                "filter_level":"medium",
+                "id":"507107212880523264",
+                "lang":"en",
+                "source":"<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+                "text":"dress code kys for making me wear this DUMB cardigan.... fuck spaghetti straps i do what i want i'm punk rock",
+                "user":{
+                    "name":"d",
+                    "description":"slightly emo very annoying",
+                    "location":"new york",
+                    "statuses_count":5154,
+                    "followers_count":2382,
+                    "friends_count":340,
+                    "screen_name":"asvprossi",
+                    "profile_image_url":"http://pbs.twimg.com/profile_images/503283128308617216/5bN9d1Aj_normal.jpeg",
+                    "profile_image_url_https":"https://pbs.twimg.com/profile_images/503283128308617216/5bN9d1Aj_normal.jpeg",
+                    "lang":"en",
+                    "time_zone":"Eastern Time (US & Canada)",
+                    "utc_offset":-14400,
+                    "listed_count":2,
+                    "id":1369631252,
+                    "id_str":"1369631252",
+                    "geo_enabled":false,
+                    "verified":false,
+                    "favourites_count":3376,
+                    "created_at":"Sun, 21 Apr 2013 13:56:16 +0000"
+                }
+            }
+        },
+        {
+            "interaction":{
+                "author":{
+                    "avatar":"http://pbs.twimg.com/profile_images/1657084315/simps_normal.jpg",
+                    "id":421095102,
+                    "language":"en",
+                    "link":"https://twitter.com/dine_here",
+                    "name":"DineHere.us",
+                    "username":"dine_here"
+                },
+                "content":"Bosses Pizza @bossespizzalw. http://t.co/HF57rDVlex #Fort_Worth At Bosses Pizza with the http://t.co/5KriG7d2DJ",
+                "created_at":"Wed, 03 Sep 2014 10:16:54 +0000",
+                "geo":{
+                    "latitude":32.806136000000002,
+                    "longitude":-97.415332000000006
+                },
+                "hashtags":[
+                    "Fort_Worth"
+                ],
+                "id":"1e433536d7a6af00e074395d68667312",
+                "link":"https://twitter.com/dine_here/status/507109975446290432",
+                "mention_ids":[
+                    774520496
+                ],
+                "mentions":[
+                    "bossespizzalw"
+                ],
+                "received_at":1409739415.1688001,
+                "schema":{
+                    "version":3
+                },
+                "source":"dine here",
+                "type":"twitter"
+            },
+            "klout":{
+                "score":60
+            },
+            "language":{
+                "tag":"en",
+                "tag_extended":"en",
+                "confidence":98
+            },
+            "links":{
+                "code":[
+                    200
+                ],
+                "created_at":[
+                    "Wed, 03 Sep 2014 10:16:56 +0000"
+                ],
+                "meta":{
+                    "charset":[
+                        "CP1252"
+                    ],
+                    "description":[
+                        "Bosses Pizza, 6059 Lake Worth Blvd picture gallery"
+                    ],
+                    "keywords":[
+                        [
+                            "Bosses Pizza picture galleries"
+                        ]
+                    ],
+                    "lang":[
+                        "en"
+                    ],
+                    "opengraph":[
+                        {
+                            "geo":{
+                                "latitude":32.806136000000002,
+                                "longitude":-97.415332000000006
+                            },
+                            "image":"http://scontent-b.cdninstagram.com/hphotos-xaf1/t51.2885-15/10616884_367687556716008_1474392082_s.jpg",
+                            "locality":"Fort Worth",
+                            "region":"TX",
+                            "site_name":"Bosses Pizza dine here",
+                            "title":"Bosses Pizza",
+                            "type":"Restaurant",
+                            "url":"http://bosses-brickoven-pizza.dinehere.us/?photos=1"
+                        }
+                    ]
+                },
+                "normalized_url":[
+                    "http://bosses-brickoven-pizza.dinehere.us?photos=1"
+                ],
+                "title":[
+                    "Bosses Pizza Photo Galleries"
+                ],
+                "url":[
+                    "http://bosses-brickoven-pizza.dinehere.us/?photos=1"
+                ]
+            },
+            "twitter":{
+                "created_at":"Wed, 03 Sep 2014 10:16:54 +0000",
+                "display_urls":[
+                    "bosses-brickoven-pizza.dinehere.us/?photos=1"
+                ],
+                "domains":[
+                    "bosses-brickoven-pizza.dinehere.us"
+                ],
+                "filter_level":"medium",
+                "geo":{
+                    "latitude":32.806136000000002,
+                    "longitude":-97.415332000000006
+                },
+                "hashtags":[
+                    "Fort_Worth"
+                ],
+                "id":"507109975446290432",
+                "lang":"en",
+                "links":[
+                    "http://bosses-brickoven-pizza.dinehere.us/?photos=1"
+                ],
+                "media":[
+                    {
+                        "display_url":"pic.twitter.com/5KriG7d2DJ",
+                        "expanded_url":"http://twitter.com/dine_here/status/507109975446290432/photo/1",
+                        "id":507109975265931264,
+                        "id_str":"507109975265931264",
+                        "media_url":"http://pbs.twimg.com/media/Bwmd1fHIcAAbvkN.jpg",
+                        "media_url_https":"https://pbs.twimg.com/media/Bwmd1fHIcAAbvkN.jpg",
+                        "sizes":{
+                            "large":{
+                                "h":150,
+                                "resize":"fit",
+                                "w":150
+                            },
+                            "medium":{
+                                "h":150,
+                                "resize":"fit",
+                                "w":150
+                            },
+                            "small":{
+                                "h":150,
+                                "resize":"fit",
+                                "w":150
+                            },
+                            "thumb":{
+                                "h":150,
+                                "resize":"crop",
+                                "w":150
+                            }
+                        },
+                        "type":"photo",
+                        "url":"http://t.co/5KriG7d2DJ"
+                    }
+                ],
+                "mention_ids":[
+                    774520496
+                ],
+                "mentions":[
+                    "bossespizzalw"
+                ],
+                "place":{
+                    "attributes":{
+
+                    },
+                    "country":"United States",
+                    "country_code":"US",
+                    "full_name":"Lake Worth, TX",
+                    "id":"7fbac95847df5212",
+                    "name":"Lake Worth",
+                    "place_type":"city",
+                    "url":"https://api.twitter.com/1.1/geo/id/7fbac95847df5212.json"
+                },
+                "source":"<a href=\"http://dinehere.us\" rel=\"nofollow\">dine here</a>",
+                "text":"Bosses Pizza @bossespizzalw. http://t.co/HF57rDVlex #Fort_Worth At Bosses Pizza with the http://t.co/5KriG7d2DJ",
+                "user":{
+                    "created_at":"Fri, 25 Nov 2011 14:02:07 +0000",
+                    "description":"The simple dining guide",
+                    "favourites_count":81,
+                    "followers_count":2548,
+                    "friends_count":1188,
+                    "geo_enabled":true,
+                    "id":421095102,
+                    "id_str":"421095102",
+                    "lang":"en",
+                    "listed_count":22,
+                    "location":"New York, USA",
+                    "name":"DineHere.us",
+                    "profile_image_url":"http://pbs.twimg.com/profile_images/1657084315/simps_normal.jpg",
+                    "profile_image_url_https":"https://pbs.twimg.com/profile_images/1657084315/simps_normal.jpg",
+                    "screen_name":"dine_here",
+                    "statuses_count":88046,
+                    "time_zone":"Central Time (US & Canada)",
+                    "url":"http://dinehere.us",
+                    "utc_offset":-18000,
+                    "verified":false
+                }
+            }
+        }
+    ],
+    "count":2
+}

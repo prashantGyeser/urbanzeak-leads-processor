@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140830111604) do
+ActiveRecord::Schema.define(version: 20140904060040) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -165,6 +165,10 @@ ActiveRecord::Schema.define(version: 20140830111604) do
     t.integer  "user_id"
     t.string   "city_latlon_generate_for"
     t.string   "tweet_id"
+    t.datetime "delivered_at"
+    t.integer  "followers_count"
+    t.integer  "friends_count"
+    t.string   "datasift_stream_hash"
   end
 
   create_table "user_categories", force: true do |t|

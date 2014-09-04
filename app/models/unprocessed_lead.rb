@@ -12,7 +12,13 @@
 #  user_id                  :integer
 #  city_latlon_generate_for :string(255)
 #  tweet_id                 :string(255)
+#  delivered_at             :datetime
+#  followers_count          :integer
+#  friends_count            :integer
+#  datasift_stream_hash     :string(255)
 #
+
+# Todo: Add columns for follower count, status count and
 
 class UnprocessedLead < ActiveRecord::Base
   belongs_to :user

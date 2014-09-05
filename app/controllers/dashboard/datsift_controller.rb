@@ -17,8 +17,4 @@ class Dashboard::DatsiftController < Dashboard::ApplicationController
     @logs = datasift.get_logs
   end
 
-  def create_subscription
-
-  end
-
 end

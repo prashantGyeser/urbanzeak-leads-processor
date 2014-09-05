@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Datasift subscription:</strong>
+  <%= @datasift_subscription.datasift_subscription_id %>
+</p>
+
+<p>
+  <strong>Stream hash:</strong>
+  <%= @datasift_subscription.stream_hash %>
+</p>
+
+<p>
+  <strong>Subscription name:</strong>
+  <%= @datasift_subscription.subscription_name %>
+</p>
+
+<p>
+  <strong>Query:</strong>
+  <%= @datasift_subscription.query %>
+</p>
+
+<%= link_to 'Edit', edit_datasift_subscription_path(@datasift_subscription) %> |
+<%= link_to 'Back', datasift_subscriptions_path %>

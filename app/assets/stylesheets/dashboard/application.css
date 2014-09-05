@@ -20,4 +20,5 @@
  *= require dashboard/animate.min
  *= require dashboard/style
  *= require dashboard/responsive
+ *= require dashboard/custom_styles
  */

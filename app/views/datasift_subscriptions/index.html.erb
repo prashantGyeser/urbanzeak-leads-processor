@@ -1,0 +1,31 @@
+<h1>Listing datasift_subscriptions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Datasift subscription</th>
+      <th>Stream hash</th>
+      <th>Subscription name</th>
+      <th>Query</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @datasift_subscriptions.each do |datasift_subscription| %>
+      <tr>
+        <td><%= datasift_subscription.datasift_subscription_id %></td>
+        <td><%= datasift_subscription.stream_hash %></td>
+        <td><%= datasift_subscription.subscription_name %></td>
+        <td><%= datasift_subscription.query %></td>
+        <td><%= link_to 'Show', datasift_subscription %></td>
+        <td><%= link_to 'Edit', edit_datasift_subscription_path(datasift_subscription) %></td>
+        <td><%= link_to 'Destroy', datasift_subscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Datasift subscription', new_datasift_subscription_path %>

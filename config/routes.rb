@@ -2,6 +2,8 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
 
+  resources :datasift_subscriptions
+
   namespace :dashboard do
   get 'datsift/subscriptions'
   end

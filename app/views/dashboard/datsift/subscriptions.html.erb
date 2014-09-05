@@ -1,2 +1,62 @@
-<h1>Dashboard::Datsift#subscriptions</h1>
-<p>Find me in app/views/dashboard/datsift/subscriptions.html.erb</p>
+<div class="page-title">	<i class="icon-custom-left"></i>
+
+  <h3><span class="semi-bold">Subscriptions</span></h3>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="grid simple">
+      <div class="grid-title no-border">
+        <h3>New <span class="semi-bold">Subscription</span></h3>
+      </div>
+      <div class="grid-body no-border">
+        <%= render "datasift_subscriptions/form" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="grid simple ">
+      <div class="grid-title no-border">
+
+      </div>
+      <div class="grid-body no-border">
+
+        <h3><span class="semi-bold">All current subscriptions</span></h3>
+
+
+
+        <table class="table no-more-tables">
+          <thead>
+          <tr>
+            <th style="width:10%">Subscription Id</th>
+            <th style="width:10%">Hash Id</th>
+            <th style="width:17%">Name</th>
+            <th style="width:10%">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <% @subscriptions[:data][:subscriptions].each do |subscription| %>
+            <tr>
+              <td class="v-align-middle"><%= subscription[:id] %></td>
+              <td class="v-align-middle"><span class="muted"><%= subscription[:hash] %></span>
+              </td>
+              <td><span class="muted"><%= subscription[:name] %></span>
+              </td>
+              <td>
+                <button class="btn btn-danger btn-cons" type="button">Destroy</button>
+              </td>
+            </tr>
+          <% end %>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

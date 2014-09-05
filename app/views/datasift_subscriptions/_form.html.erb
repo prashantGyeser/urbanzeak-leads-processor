@@ -1,0 +1,65 @@
+<%= form_for(@datasift_subscription) do |f| %>
+
+  <% if @datasift_subscription.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@datasift_subscription.errors.count, "error") %> prohibited this datasift_subscription from being saved:</h2>
+
+      <ul>
+        <% @datasift_subscription.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <% if !notice.nil? %>
+    <div class="alert alert-success">
+      <button data-dismiss="alert" class="close"></button>
+      Success: <%= notice %>
+    </div>
+  <% end %>
+
+  <!--<div class="field">-->
+    <%# f.label :datasift_subscription_id %><br>
+    <%# f.text_field :datasift_subscription_id %>
+  <!--</div>-->
+
+  <div id="create_subscription">
+    <div class="row">
+      <div class="col-md-6">
+          <!--<input placeholder="Stream hash" class="form-control" type="text">-->
+        <%= f.text_field :stream_hash, placeholder: "Stream hash", class: "form-control"  %>
+
+      </div>
+      <div class="col-md-6">
+        <!--<input placeholder="Subscription name" class="form-control" type="text">-->
+        <%= f.text_field :subscription_name, placeholder: "Subscription name", class: "form-control" %>
+      </div>
+      <!--<div class="col-md-2">-->
+        <!--<button class="btn btn-primary btn-cons" type="button">Create Subscription</button>-->
+      <!--</div>-->
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <%= f.text_area :query, placeholder: "CSDL query used for this hash", class: "form-control", rows: 5 %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <%= f.submit :class => "btn btn-primary btn-cons" %>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="field">
+
+  </div>
+  <div class="actions">
+
+  </div>
+<% end %>

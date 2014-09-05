@@ -26,7 +26,7 @@
       </div>
       <div class="grid-body no-border">
 
-        <h3><span class="semi-bold">All current subscriptions</span></h3>
+        <h3><span class="semi-bold">All subscriptions through our dashboard</span></h3>
 
 
 
@@ -41,17 +41,63 @@
           </thead>
           <tbody>
 
-          <% @subscriptions[:data][:subscriptions].each do |subscription| %>
+          <% @subscriptions.each do |datasift_subscription|  %>
+
             <tr>
-              <td class="v-align-middle"><%= subscription[:id] %></td>
-              <td class="v-align-middle"><span class="muted"><%= subscription[:hash] %></span>
+              <td class="v-align-middle"><%= datasift_subscription[:datasift_subscription_id] %></td>
+              <td class="v-align-middle"><span class="muted"><%= datasift_subscription[:stream_hash] %></span>
               </td>
-              <td><span class="muted"><%= subscription[:name] %></span>
+              <td><span class="muted"><%= datasift_subscription[:subscription_name] %></span>
               </td>
               <td>
-                <button class="btn btn-danger btn-cons" type="button">Destroy</button>
+                <%= link_to 'Destroy', datasift_subscription, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-cons" %>
               </td>
             </tr>
+
+          <% end %>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="grid simple ">
+      <div class="grid-title no-border">
+
+      </div>
+      <div class="grid-body no-border">
+
+        <h3><span class="semi-bold">All subscriptions on datasift</span></h3>
+
+
+
+        <table class="table no-more-tables">
+          <thead>
+          <tr>
+            <th style="width:10%">Subscription Id</th>
+            <th style="width:10%">Hash Id</th>
+            <th style="width:17%">Name</th>
+            <th style="width:10%">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <% @all_subscriptions.each do |datasift_subscription|  %>
+
+            <tr>
+              <td class="v-align-middle"><%= datasift_subscription[:id] %></td>
+              <td class="v-align-middle"><span class="muted"><%= datasift_subscription[:hash] %></span>
+              </td>
+              <td><span class="muted"><%= datasift_subscription[:name] %></span>
+              </td>
+              <td></td>
+            </tr>
+
           <% end %>
 
           </tbody>

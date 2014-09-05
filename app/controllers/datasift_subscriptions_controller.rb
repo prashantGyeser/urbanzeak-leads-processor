@@ -64,11 +64,24 @@ class DatasiftSubscriptionsController < ApplicationController
   # DELETE /datasift_subscriptions/1
   # DELETE /datasift_subscriptions/1.json
   def destroy
-    @datasift_subscription.destroy
-    respond_to do |format|
-      format.html { redirect_to datasift_subscriptions_url, notice: 'Datasift subscription was successfully destroyed.' }
-      format.json { head :no_content }
+
+    datasift_subscription_attributes = @datasift_subscription.attributes
+    datasift_subscription_attributes.delete ["id"]
+    deleted_datasift_subscription = DeletedDatasiftSubscription.new(datasift_subscription_attributes)
+
+    if deleted_datasift_subscription.save
+      @datasift_subscription.destroy
+      respond_to do |format|
+
+        datasift_calls = DatasiftCalls.new
+        datasift_calls.delete_push_subscription(@datasift_subscription[:datasift_subscription_id])
+
+        flash[:notice] = "Datasift subscription was successfully destroyed."
+        format.html { redirect_to dashboard_datsift_subscriptions_path }
+        format.json { head :no_content }
+      end
     end
+
   end
 
   private

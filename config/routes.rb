@@ -2,6 +2,18 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
 
+  namespace :dashboard do
+  get 'datsift/subscriptions'
+  end
+
+  namespace :dashboard do
+  get 'datsift/billing'
+  end
+
+  namespace :dashboard do
+  get 'datsift/logs'
+  end
+
   namespace :api , :defaults => {:format => :json} do
     namespace :v1 do
       get "leads/index"

@@ -20,5 +20,15 @@
 //= require plugins/pace/pace.min
 //= require plugins/jquery-block-ui/jqueryblockui.js
 //= require plugins/jquery-slider/jquery.sidr.min
+//= require plugins/jquery-flot/jquery.flot.js
+//= require plugins/jquery-flot/jquery.flot.time.min.js
+//= require plugins/jquery-flot/jquery.flot.selection.min.js
+//= require plugins/jquery-flot/jquery.flot.animator.min.js
+//= require plugins/jquery-flot/jquery.flot.orderBars.js
+//= require plugins/jquery-flot/jquery.flot.orderBars.js
+//= require dashboard/charts
+//= require dashboard/core
+//= require dashboard/chat
+//= require dashboard/demo
 //= require turbolinks
 

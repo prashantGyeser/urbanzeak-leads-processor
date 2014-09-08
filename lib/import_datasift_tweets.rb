@@ -34,6 +34,8 @@ class ImportDatasiftTweets
             unprocessed_lead_to_store_hash[:user_location] = interaction["twitter"]["user"]["location"]
             unprocessed_lead_to_store_hash[:datasift_stream_hash] = subscription_details[:datasift_stream_hash]
             unprocessed_lead_to_store_hash[:delivered_at] = subscription_details[:delivered_at]
+            unprocessed_lead_to_store_hash[:subscription_id] = subscription_details[:id]
+            unprocessed_lead_to_store_hash[:klout_score] = interaction[:klout][:score]
 
             unprocessed_lead = UnprocessedLead.new(unprocessed_lead_to_store_hash)
 

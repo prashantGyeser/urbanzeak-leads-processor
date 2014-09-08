@@ -16,6 +16,8 @@
 #  followers_count          :integer
 #  friends_count            :integer
 #  datasift_stream_hash     :string(255)
+#  subscription_id          :string(255)
+#  klout_score              :integer
 #
 
 # Todo: Add columns for follower count, status count and

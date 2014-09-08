@@ -1,2 +1,43 @@
-<h1>Dashboard::Reports#index</h1>
-<p>Find me in app/views/dashboard/reports/index.html.erb</p>
+<div class="page-title">	<i class="icon-custom-left"></i>
+
+  <h3><span class="semi-bold">Reports</span></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="grid simple">
+      <div class="grid-body no-border">
+        <h3>Efficiency <span class="semi-bold">Charts</span></h3>
+        <p>
+          This is a chart comparing initial tweets to leads and non leads
+        </p>
+        <br>
+        <div id="placeholder" class="demo-placeholder" style="width:100%;height:250px;"></div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mini-chart-wrapper">
+              <div class="chart-details-wrapper">
+                <div class="chartname"> New Orders </div>
+                <div class="chart-value"> 17,555 </div>
+              </div>
+              <div class="mini-chart">
+                <div id="mini-chart-orders"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mini-chart-wrapper">
+              <div class="chart-details-wrapper">
+                <div class="chartname"> My Balance </div>
+                <div class="chart-value"> $17,555 </div>
+              </div>
+              <div class="mini-chart">
+                <div id="mini-chart-other" ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

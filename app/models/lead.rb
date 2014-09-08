@@ -15,6 +15,12 @@
 #  city_latlon_generate_for  :string(255)
 #  tweet_id                  :string(255)
 #  sent                      :boolean
+#  delivered_at              :datetime
+#  followers_count           :integer
+#  friends_count             :integer
+#  datasift_stream_hash      :string(255)
+#  subscription_id           :string(255)
+#  klout_score               :integer
 #
 
 class Lead < ActiveRecord::Base

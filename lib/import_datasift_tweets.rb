@@ -47,7 +47,7 @@ class ImportDatasiftTweets
             end
 
             unprocessed_lead = UnprocessedLead.new(unprocessed_lead_to_store_hash)
-            
+
             if unprocessed_lead.save
               puts "The unprocessed lead is: #{unprocessed_lead.id}"
             else

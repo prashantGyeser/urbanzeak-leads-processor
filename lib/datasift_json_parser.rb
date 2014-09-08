@@ -26,6 +26,7 @@ class DatasiftJsonParser
       subscription_details = {}
       subscription_details[:datasift_stream_hash] = parsed_json["hash"]
       subscription_details[:delivered_at] = parsed_json["delivered_at"].to_datetime
+      subscription_details[:id] = parsed_json["id"]
       return subscription_details
 
     rescue JSON::ParserError => parse_error

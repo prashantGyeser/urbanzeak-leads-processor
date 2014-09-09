@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140908125048) do
+ActiveRecord::Schema.define(version: 20140909061522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20140908125048) do
     t.text     "query"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_id"
+    t.integer  "city_id"
   end
 
   create_table "delayed_jobs", force: true do |t|
@@ -106,6 +108,7 @@ ActiveRecord::Schema.define(version: 20140908125048) do
     t.string   "datasift_stream_hash"
     t.string   "subscription_id"
     t.integer  "klout_score"
+    t.integer  "lead_stream_id"
   end
 
   create_table "non_lead_tweet_in_cities", force: true do |t|
@@ -125,6 +128,7 @@ ActiveRecord::Schema.define(version: 20140908125048) do
     t.string   "datasift_stream_hash"
     t.string   "subscription_id"
     t.integer  "klout_score"
+    t.integer  "lead_stream_id"
   end
 
   create_table "oauth_tokens", force: true do |t|
@@ -134,6 +138,15 @@ ActiveRecord::Schema.define(version: 20140908125048) do
     t.string   "provider"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "reports", force: true do |t|
+    t.integer  "total_tweets_for_day"
+    t.integer  "lead_stream_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "datasift_subscription_id"
+    t.datetime "date_collected"
   end
 
   create_table "training_leads", force: true do |t|
@@ -189,6 +202,7 @@ ActiveRecord::Schema.define(version: 20140908125048) do
     t.string   "datasift_stream_hash"
     t.string   "subscription_id"
     t.integer  "klout_score"
+    t.integer  "lead_stream_id"
   end
 
   create_table "unprocessed_leads", force: true do |t|
@@ -207,6 +221,7 @@ ActiveRecord::Schema.define(version: 20140908125048) do
     t.string   "datasift_stream_hash"
     t.string   "subscription_id"
     t.integer  "klout_score"
+    t.integer  "lead_stream_id"
   end
 
   create_table "user_categories", force: true do |t|

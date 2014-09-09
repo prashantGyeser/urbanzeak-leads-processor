@@ -88,6 +88,6 @@ class BayesianClassifier
 
   end
   # Todo: Enable this after writing the tests for this class
-  #handle_asynchronously :process_all_unprocessed_leads
+  handle_asynchronously :process_all_unprocessed_leads
 
 end

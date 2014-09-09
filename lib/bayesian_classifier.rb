@@ -31,26 +31,9 @@ class BayesianClassifier
     processed_count = 1
     puts "Beginning classification"
     UnprocessedLead.find_each do |unprocessed_lead|
-      #if UrlChecker.does_not_contains_url?(unprocessed_lead.tweet_body)
+      if UrlChecker.does_not_contains_url?(unprocessed_lead.tweet_body)
 
-        report = Report.where(datasift_subscription_id: unprocessed_lead.subscription_id).where(date_collected: unprocessed_lead.created_at)
-
-        if report.empty?
-          puts "It is getting to the empty report part"
-          if unprocessed_lead.lead_stream_id.blank?
-            Report.create(total_tweets_for_day: 1, date_collected: unprocessed_lead.created_at, datasift_subscription_id: unprocessed_lead.subscription_id)
-
-            puts "Report created"
-
-          elsif unprocessed_lead.subscription_id.blank?
-            Report.create(total_tweets_for_day: 1, date_collected: unprocessed_lead.created_at, lead_stream_id: unprocessed_lead.lead_stream_id)
-          end
-        else
-          report_to_update = report.first
-          total_tweets = report_to_update.total_tweets_for_day
-          report_to_update.total_tweets_for_day = total_tweets + 1
-          report_to_update.save
-        end
+        #datasift_subscription_for_unprocessed_lead = ReportsCollector.get_datasift_subscription(unprocessed_lead[:subscription_id])
 
 
         total_tweets_nyc = total_tweets_nyc + 1
@@ -84,7 +67,7 @@ class BayesianClassifier
 
         end
 
-      #end
+      end
 
       unprocessed_lead.destroy
 

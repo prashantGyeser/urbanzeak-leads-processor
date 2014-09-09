@@ -20,7 +20,7 @@ RSpec.describe ReturnAllRecordsAsHash do
   it "should return an array with a valid city and category associated with datasift streams" do
     lead = create(:lead, datasift_subscription_id: @datasift_subscription[:id])
     array_of_leads = ReturnAllRecordsAsHash.array_of_leads
-    #expect(non_lead[:datasift_subscription]).to eq 2
+    expect(array_of_leads[0][:processor_datasift_subscription_id]).to eq @datasift_subscription.id
   end
 
 end

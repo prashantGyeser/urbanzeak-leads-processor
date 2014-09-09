@@ -14,14 +14,12 @@ class ReturnAllRecordsAsHash
         category = Category.find(datasift_subscription[:category_id])
         city = City.find(datasift_subscription.city_id)
 
-        lead_hash_with_keys_to_send[:datasift_subscription] = datasift_subscription.datasift_subscription_id
-        lead_hash_with_keys_to_send[:is_datasift_stream] = true
+        lead_hash_with_keys_to_send[:processor_datasift_subscription_id] = datasift_subscription.id
         lead_hash_with_keys_to_send[:city] = city.city_name
         lead_hash_with_keys_to_send[:category] = category.name
       else
         user = User.find(lead.user_id)
         lead_hash_with_keys_to_send[:email] = user.email
-        lead_hash_with_keys_to_send[:is_datasift_stream] = false
       end
 
 

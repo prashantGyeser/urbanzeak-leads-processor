@@ -33,7 +33,12 @@ class BayesianClassifier
     UnprocessedLead.find_each do |unprocessed_lead|
       if UrlChecker.does_not_contains_url?(unprocessed_lead.tweet_body)
 
-        #datasift_subscription_for_unprocessed_lead = ReportsCollector.get_datasift_subscription(unprocessed_lead[:subscription_id])
+        if unprocessed_lead[:subscription_id].nil?
+          # Todo: Add code to handle this when it comes from a lead stream
+        else
+          datasift_subscription_for_unprocessed_lead = ReportsCollector.get_datasift_subscription(unprocessed_lead[:subscription_id])
+          report = ReportsCollector.create_or_add(datasift_subscription_for_unprocessed_lead[:id], unprocessed_lead[:created_at])
+        end
 
 
         total_tweets_nyc = total_tweets_nyc + 1

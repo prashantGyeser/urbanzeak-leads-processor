@@ -52,7 +52,7 @@ class ReturnAllRecordsAsHash
       lead_hash_with_keys_to_send[:city_latlon_generate_for] = lead.city_latlon_generate_for
       lead_hash_with_keys_to_send[:tweet_id] = lead.tweet_id
 
-      array_of_lead_hashes << lead_hash_with_keys_to_send
+      array_of_report_hashes << report_hash_with_keys_to_send
 
     end
 

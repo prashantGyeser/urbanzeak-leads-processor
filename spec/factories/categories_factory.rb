@@ -10,9 +10,10 @@
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
+require 'faker'
+
 FactoryGirl.define do
   factory :category do
-    name "MyString"
-    user_id 1
+    name Faker::Lorem.characters(10)
   end
 end

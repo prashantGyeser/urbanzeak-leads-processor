@@ -15,11 +15,13 @@
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
+require 'faker'
+
 FactoryGirl.define do
   factory :datasift_subscription do
-    datasift_subscription_id "MyString"
-    stream_hash "MyString"
-    subscription_name "MyString"
-    query "MyText"
+    datasift_subscription_id Faker::Lorem.characters(10)
+    stream_hash Faker::Lorem.characters(10)
+    subscription_name Faker::Lorem.characters(10)
+    query Faker::Lorem.characters(10)
   end
 end

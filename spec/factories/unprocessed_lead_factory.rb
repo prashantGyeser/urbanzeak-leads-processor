@@ -21,3 +21,18 @@
 #  klout_score              :integer
 #  lead_stream_id           :integer
 #
+
+require 'faker'
+
+FactoryGirl.define do
+  factory :unprocessed_lead do
+    tweet_poster_screen_name  Faker::Internet.user_name('Nancy Johnson', %w(. _ -))
+    tweet_body                Faker::Lorem.characters(110)
+    user_location             Faker::Address.city
+    tweet_id                  Faker::Lorem.characters(10)
+    delivered_at              Date.today
+    followers_count           Faker::Number.number(2)
+    friends_count             Faker::Number.number(2)
+    klout_score               Faker::Number.number(2)
+  end
+end

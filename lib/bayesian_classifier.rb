@@ -40,7 +40,6 @@ class BayesianClassifier
           report = ReportsCollector.create_or_add(datasift_subscription_for_unprocessed_lead[:id], unprocessed_lead[:created_at])
         end
 
-
         total_tweets_nyc = total_tweets_nyc + 1
         puts unprocessed_lead.user_location
         puts "Total tweets: #{total_tweets_nyc}"
@@ -49,6 +48,7 @@ class BayesianClassifier
         unprocessed_lead_attributes.delete('id')
 
         if datasift_subscription_for_unprocessed_lead
+
           unprocessed_lead_attributes["datasift_subscription_id"] = datasift_subscription_for_unprocessed_lead[:id]
         end
 
@@ -65,7 +65,7 @@ class BayesianClassifier
 
         else
           non_lead_tweet_in_city = NonLeadTweetInCity.create(unprocessed_lead_attributes)
-
+          puts non_lead_tweet_in_city[:tweet_id]
           if non_lead_tweet_in_city.errors.full_messages.first == "Tweet has already been taken"
             Honeybadger.notify(
                 :error_class   => "NonLeadTweetInCity Exists",
@@ -87,7 +87,7 @@ class BayesianClassifier
 
 
   end
-
-  handle_asynchronously :process_all_unprocessed_leads
+  # Todo: Enable this after writing the tests for this class
+  #handle_asynchronously :process_all_unprocessed_leads
 
 end

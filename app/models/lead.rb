@@ -22,6 +22,7 @@
 #  subscription_id           :string(255)
 #  klout_score               :integer
 #  lead_stream_id            :integer
+#  datasift_subscription_id  :integer
 #
 
 class Lead < ActiveRecord::Base

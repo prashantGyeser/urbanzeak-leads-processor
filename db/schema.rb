@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140909061522) do
+ActiveRecord::Schema.define(version: 20140909120934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 20140909061522) do
     t.string   "subscription_id"
     t.integer  "klout_score"
     t.integer  "lead_stream_id"
+    t.integer  "datasift_subscription_id"
   end
 
   create_table "non_lead_tweet_in_cities", force: true do |t|
@@ -129,6 +130,7 @@ ActiveRecord::Schema.define(version: 20140909061522) do
     t.string   "subscription_id"
     t.integer  "klout_score"
     t.integer  "lead_stream_id"
+    t.integer  "datasift_subscription_id"
   end
 
   create_table "oauth_tokens", force: true do |t|
@@ -203,6 +205,7 @@ ActiveRecord::Schema.define(version: 20140909061522) do
     t.string   "subscription_id"
     t.integer  "klout_score"
     t.integer  "lead_stream_id"
+    t.integer  "datasift_subscription_id"
   end
 
   create_table "unprocessed_leads", force: true do |t|

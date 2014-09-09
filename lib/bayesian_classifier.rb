@@ -48,6 +48,10 @@ class BayesianClassifier
         unprocessed_lead_attributes = unprocessed_lead.attributes
         unprocessed_lead_attributes.delete('id')
 
+        if datasift_subscription_for_unprocessed_lead
+          unprocessed_lead_attributes["datasift_subscription_id"] = datasift_subscription_for_unprocessed_lead[:id]
+        end
+
         if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead
           unchecked_lead = UncheckedLead.create(unprocessed_lead_attributes)
 

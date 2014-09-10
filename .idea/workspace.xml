@@ -49,11 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datasift_subscription.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="datasift_subscription.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/datasift_subscription.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3858521" vertical-offset="0" max-vertical-offset="622">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
               <caret line="16" column="80" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="import_datasift_tweets.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/import_datasift_tweets.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6141479" vertical-offset="653" max-vertical-offset="1275">
+              <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -96,7 +106,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/dashboard/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dashboard/reports/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dashboard/application.js" />
-        <option value="$PROJECT_DIR$/lib/import_datasift_tweets.rb" />
         <option value="$PROJECT_DIR$/app/models/lead.rb" />
         <option value="$PROJECT_DIR$/lib/datasift_json_parser.rb" />
         <option value="$PROJECT_DIR$/app/models/non_lead_tweet_in_city.rb" />
@@ -120,6 +129,7 @@
         <option value="$PROJECT_DIR$/app/controllers/api/v1/reports_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/datasift_subscriptions/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/datasift_subscription.rb" />
+        <option value="$PROJECT_DIR$/lib/import_datasift_tweets.rb" />
       </list>
     </option>
   </component>
@@ -707,20 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/import_manually_checked_leads.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.075250834" vertical-offset="135" max-vertical-offset="795">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/import_datasift_tweets.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1275">
-          <caret line="38" column="79" selection-start-line="38" selection-start-column="79" selection-end-line="38" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/fixtures/datasift_sample.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2257525" vertical-offset="0" max-vertical-offset="3960">
@@ -961,8 +957,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/datasift_subscription.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3858521" vertical-offset="0" max-vertical-offset="622">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
           <caret line="16" column="80" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/import_manually_checked_leads.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.028428094" vertical-offset="197" max-vertical-offset="795">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/import_datasift_tweets.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6141479" vertical-offset="653" max-vertical-offset="1275">
+          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
           <folding />
         </state>
       </provider>

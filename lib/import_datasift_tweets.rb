@@ -67,7 +67,7 @@ class ImportDatasiftTweets
         end
 
         items_imported = items_imported + 1
-
+        object.delete
       end
 
     end

@@ -23,4 +23,12 @@ RSpec.describe ReturnAllRecordsAsHash do
     expect(array_of_leads[0][:processor_datasift_subscription_id]).to eq @datasift_subscription.id
   end
 
+  it "should return a list of report rows with valid cities and categories" do
+    report = Report.create(total_tweets_for_day: Faker::Number.number(3), datasift_subscription_id: @datasift_subscription.id, date_collected: Date.today)
+    reports = ReturnAllRecordsAsHash.array_of_reports
+
+    expect(reports[0][:city]).to eq @city.city_name
+
+  end
+
 end

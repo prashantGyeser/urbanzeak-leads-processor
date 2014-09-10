@@ -2,12 +2,6 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
 
-  namespace :api do
-  namespace :v1 do
-    get 'reports/all'
-    end
-  end
-
   namespace :dashboard do
   get 'reports/index'
   end
@@ -29,6 +23,7 @@ Rails.application.routes.draw do
   namespace :api , :defaults => {:format => :json} do
     namespace :v1 do
       get "leads/index"
+      get 'reports/all'
     end
   end
 

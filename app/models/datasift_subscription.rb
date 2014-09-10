@@ -14,5 +14,5 @@
 #
 
 class DatasiftSubscription < ActiveRecord::Base
-  validates_presence_of :stream_hash, :subscription_name
+  validates_presence_of :stream_hash, :subscription_name, :category_id, :city_id
 end

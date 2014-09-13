@@ -18,6 +18,8 @@ class ReturnAllRecordsAsHash
         lead_hash_with_keys_to_send[:city] = city.city_name
         lead_hash_with_keys_to_send[:category] = category.name
         lead_hash_with_keys_to_send[:klout_score] = lead.klout_score
+        lead_hash_with_keys_to_send[:followers_count] = lead.followers_count
+        lead_hash_with_keys_to_send[:friends_count] = lead.friends_count
       else
         user = User.find(lead.user_id)
         lead_hash_with_keys_to_send[:email] = user.email

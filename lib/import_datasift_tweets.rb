@@ -36,6 +36,8 @@ class ImportDatasiftTweets
             unprocessed_lead_to_store_hash[:tweet_id] = interaction["twitter"]["id"]
             unprocessed_lead_to_store_hash[:tweet_body] = interaction["twitter"]["text"]
             unprocessed_lead_to_store_hash[:user_location] = interaction["twitter"]["user"]["location"]
+            unprocessed_lead_to_store_hash[:followers_count] = interaction["twitter"]["user"]["followers_count"]
+            unprocessed_lead_to_store_hash[:friends_count] = interaction["twitter"]["user"]["friends_count"]
             unprocessed_lead_to_store_hash[:datasift_stream_hash] = subscription_details[:datasift_stream_hash]
             unprocessed_lead_to_store_hash[:delivered_at] = subscription_details[:delivered_at]
             unprocessed_lead_to_store_hash[:subscription_id] = subscription_details[:id]

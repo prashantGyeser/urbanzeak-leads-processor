@@ -17,6 +17,7 @@ class ReturnAllRecordsAsHash
         lead_hash_with_keys_to_send[:processor_datasift_subscription_id] = datasift_subscription.id
         lead_hash_with_keys_to_send[:city] = city.city_name
         lead_hash_with_keys_to_send[:category] = category.name
+        lead_hash_with_keys_to_send[:klout_score] = lead.klout_score
       else
         user = User.find(lead.user_id)
         lead_hash_with_keys_to_send[:email] = user.email

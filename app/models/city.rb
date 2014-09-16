@@ -13,5 +13,6 @@
 #
 
 class City < ActiveRecord::Base
+  validates :city_name, :uniqueness => true
   belongs_to :user
 end

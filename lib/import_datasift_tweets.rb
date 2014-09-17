@@ -27,7 +27,7 @@ class ImportDatasiftTweets
         if DatasiftJsonParser.is_interaction_delete?(json_content)
           datasift_interactions = DatasiftJsonParser.return_datasift_interactions(json_content)
           puts "The delete datasift interaction is: #{datasift_interactions}"
-          DeletedTweet.create(tweet_id: datasift_interactions["twitter"]["id"].to_s, screen_name: datasift_interactions["twitter"]["user"]["screen_name"])
+          DeletedTweet.create(tweet_id: datasift_interactions[0]["twitter"]["id"].to_s, screen_name: datasift_interactions[0]["twitter"]["user"]["screen_name"])
         else
           begin
             subscription_details = DatasiftJsonParser.return_subscription_details(json_content)

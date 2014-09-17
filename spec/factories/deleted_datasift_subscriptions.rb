@@ -9,6 +9,8 @@
 #  query                    :text
 #  created_at               :datetime
 #  updated_at               :datetime
+#  category_id              :integer
+#  city_id                  :integer
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl

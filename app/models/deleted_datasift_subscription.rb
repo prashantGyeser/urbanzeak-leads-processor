@@ -9,6 +9,8 @@
 #  query                    :text
 #  created_at               :datetime
 #  updated_at               :datetime
+#  category_id              :integer
+#  city_id                  :integer
 #
 
 class DeletedDatasiftSubscription < ActiveRecord::Base

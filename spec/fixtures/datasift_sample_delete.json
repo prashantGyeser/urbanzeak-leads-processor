@@ -1,0 +1,24 @@
+{
+    "hash":"9754d0836905f4da349e78fb51f16642",
+    "hash_type":"stream",
+    "id":"4345c0169af38ff6db591470049ccc66",
+    "delivered_at":"Wed, 17 Sep 2014 13:12:21 +0000",
+    "interactions":[
+        {
+            "deleted":true,
+            "interaction":{
+                "id":"1e43e3b2d2eeac80e0742e254ab0ab86",
+                "type":"twitter"
+            },
+            "twitter":{
+                "id":"512139143871467520",
+                "user":{
+                    "id":377573682,
+                    "id_str":"377573682",
+                    "screen_name":"colllsher"
+                }
+            }
+        }
+    ],
+    "count":1
+}

@@ -31,4 +31,14 @@ RSpec.describe DatasiftJsonParser do
 
   end
 
+  it "should return true if the interaction is a delete interaction" do
+    json_content = File.read("./spec/fixtures/datasift_sample_delete.json")
+
+    results = DatasiftJsonParser.is_interaction_delete?(json_content)
+
+    expect(results).to eq true
+
+  end
+
+
 end

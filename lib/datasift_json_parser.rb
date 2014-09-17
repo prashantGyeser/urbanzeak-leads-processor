@@ -41,5 +41,31 @@ class DatasiftJsonParser
   end
 
 
+  def self.is_interaction_delete?(json_to_check)
+
+    begin
+      parsed_json = JSON.parse(json_to_check)
+
+      if parsed_json["interactions"][0]["deleted"].nil?
+        #puts "Gettiong here"
+      else
+        if parsed_json["interactions"][0]["deleted"] == true
+          return true
+        end
+      end
+      return false
+    rescue JSON::ParserError => parse_error
+
+      Honeybadger.notify(
+          :error_class   => "Datasift delete parse error",
+          :error_message => "Datasift delete parse error: #{parse_error.message}",
+          :parameters    => {json_object: json_to_check.to_s}
+      )
+
+      return "Invalid json! This json object has been logged to honeybadger"
+
+    end
+  end
+
 
 end

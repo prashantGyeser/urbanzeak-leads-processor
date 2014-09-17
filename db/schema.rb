@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140909120934) do
+ActiveRecord::Schema.define(version: 20140917094244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,8 @@ ActiveRecord::Schema.define(version: 20140909120934) do
     t.text     "query"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_id"
+    t.integer  "city_id"
   end
 
   create_table "importer_errors", force: true do |t|

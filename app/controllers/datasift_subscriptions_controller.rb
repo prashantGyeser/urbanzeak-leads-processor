@@ -92,6 +92,6 @@ class DatasiftSubscriptionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def datasift_subscription_params
-      params.require(:datasift_subscription).permit(:datasift_subscription_id, :stream_hash, :subscription_name, :query)
+      params.require(:datasift_subscription).permit(:datasift_subscription_id, :stream_hash, :subscription_name, :query, :city_id, :category_id)
     end
 end

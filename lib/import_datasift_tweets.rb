@@ -24,48 +24,53 @@ class ImportDatasiftTweets
       if object.key != 'data/'
         json_content = object.read
 
-        begin
-          subscription_details = DatasiftJsonParser.return_subscription_details(json_content)
+        if DatasiftJsonParser.is_interaction_delete?(json_content)
           datasift_interactions = DatasiftJsonParser.return_datasift_interactions(json_content)
+          DeletedTweet.create(tweet_id: datasift_interactions["twitter"]["id"], screen_name: datasift_interactions["twitter"]["user"]["screen_name"])
+        else
+          begin
+            subscription_details = DatasiftJsonParser.return_subscription_details(json_content)
+            datasift_interactions = DatasiftJsonParser.return_datasift_interactions(json_content)
 
-          puts "It got past the parser and onto the collector"
+            puts "It got past the parser and onto the collector"
 
-          datasift_interactions.each do |interaction|
-            unprocessed_lead_to_store_hash = {}
-            unprocessed_lead_to_store_hash[:tweet_poster_screen_name] = interaction["interaction"]["author"]["username"]
-            unprocessed_lead_to_store_hash[:tweet_id] = interaction["twitter"]["id"]
-            unprocessed_lead_to_store_hash[:tweet_body] = interaction["twitter"]["text"]
-            unprocessed_lead_to_store_hash[:user_location] = interaction["twitter"]["user"]["location"]
-            unprocessed_lead_to_store_hash[:followers_count] = interaction["twitter"]["user"]["followers_count"]
-            unprocessed_lead_to_store_hash[:friends_count] = interaction["twitter"]["user"]["friends_count"]
-            unprocessed_lead_to_store_hash[:datasift_stream_hash] = subscription_details[:datasift_stream_hash]
-            unprocessed_lead_to_store_hash[:delivered_at] = subscription_details[:delivered_at]
-            unprocessed_lead_to_store_hash[:subscription_id] = subscription_details[:id]
-            if interaction["klout"]["score"].nil?
-              puts "The klout score is nil"
-              total_tweets_where_score_is_nil = 0
-            else
-              unprocessed_lead_to_store_hash[:klout_score] = interaction["klout"]["score"]
+            datasift_interactions.each do |interaction|
+              unprocessed_lead_to_store_hash = {}
+              unprocessed_lead_to_store_hash[:tweet_poster_screen_name] = interaction["interaction"]["author"]["username"]
+              unprocessed_lead_to_store_hash[:tweet_id] = interaction["twitter"]["id"]
+              unprocessed_lead_to_store_hash[:tweet_body] = interaction["twitter"]["text"]
+              unprocessed_lead_to_store_hash[:user_location] = interaction["twitter"]["user"]["location"]
+              unprocessed_lead_to_store_hash[:followers_count] = interaction["twitter"]["user"]["followers_count"]
+              unprocessed_lead_to_store_hash[:friends_count] = interaction["twitter"]["user"]["friends_count"]
+              unprocessed_lead_to_store_hash[:datasift_stream_hash] = subscription_details[:datasift_stream_hash]
+              unprocessed_lead_to_store_hash[:delivered_at] = subscription_details[:delivered_at]
+              unprocessed_lead_to_store_hash[:subscription_id] = subscription_details[:id]
+              if interaction["klout"]["score"].nil?
+                puts "The klout score is nil"
+                total_tweets_where_score_is_nil = 0
+              else
+                unprocessed_lead_to_store_hash[:klout_score] = interaction["klout"]["score"]
+              end
+
+              unprocessed_lead = UnprocessedLead.new(unprocessed_lead_to_store_hash)
+
+              if unprocessed_lead.save
+                puts "The unprocessed lead is: #{unprocessed_lead.id}"
+              else
+                tweet_import_errors = tweet_import_errors + 1
+                puts "Something went wrong #{unprocessed_lead.errors}"
+              end
+              puts "Non klout scores: #{total_tweets_where_score_is_nil}"
+              puts "Import errors are: #{tweet_import_errors}"
             end
 
-            unprocessed_lead = UnprocessedLead.new(unprocessed_lead_to_store_hash)
-
-            if unprocessed_lead.save
-              puts "The unprocessed lead is: #{unprocessed_lead.id}"
-            else
-              tweet_import_errors = tweet_import_errors + 1
-              puts "Something went wrong #{unprocessed_lead.errors}"
-            end
-            puts "Non klout scores: #{total_tweets_where_score_is_nil}"
-            puts "Import errors are: #{tweet_import_errors}"
+          rescue => e
+            Honeybadger.notify(
+                :error_class   => "Datasift import error",
+                :error_message => "Datasift import error: #{e.message}",
+                :parameters    => {json_object: e.to_s}
+            )
           end
-
-        rescue => e
-          Honeybadger.notify(
-              :error_class   => "Datasift import error",
-              :error_message => "Datasift import error: #{e.message}",
-              :parameters    => {json_object: e.to_s}
-          )
         end
 
         items_imported = items_imported + 1

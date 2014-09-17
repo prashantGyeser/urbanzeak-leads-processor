@@ -29,31 +29,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="datasift_sample_delete.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/fixtures/datasift_sample_delete.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="435">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="datasift_json_parser_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/lib/datasift_json_parser_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="735">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
               <caret line="25" column="67" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datasift_json_parser.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="import_datasift_tweets.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/import_datasift_tweets.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.37299034" vertical-offset="203" max-vertical-offset="1395">
+              <caret line="28" column="114" selection-start-line="28" selection-start-column="114" selection-end-line="28" selection-end-column="148" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datasift_sample_delete.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/fixtures/datasift_sample_delete.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="435">
+              <caret line="17" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datasift_json_parser.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/datasift_json_parser.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5659164" vertical-offset="413" max-vertical-offset="1140">
-              <caret line="51" column="52" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1140">
+              <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -112,7 +122,6 @@
         <option value="$PROJECT_DIR$/app/controllers/api/v1/reports_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/datasift_subscriptions/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/datasift_subscription.rb" />
-        <option value="$PROJECT_DIR$/lib/import_datasift_tweets.rb" />
         <option value="$PROJECT_DIR$/lib/return_all_records_as_hash.rb" />
         <option value="$PROJECT_DIR$/app/models/city.rb" />
         <option value="$PROJECT_DIR$/app/models/category.rb" />
@@ -120,6 +129,7 @@
         <option value="$PROJECT_DIR$/spec/fixtures/datasift_sample_delete.json" />
         <option value="$PROJECT_DIR$/spec/lib/datasift_json_parser_spec.rb" />
         <option value="$PROJECT_DIR$/lib/datasift_json_parser.rb" />
+        <option value="$PROJECT_DIR$/lib/import_datasift_tweets.rb" />
       </list>
     </option>
   </component>
@@ -894,13 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/fixtures/datasift_sample.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6020067" vertical-offset="360" max-vertical-offset="3960">
-          <caret line="48" column="34" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/bayesian_classifier.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2540193" vertical-offset="570" max-vertical-offset="1470">
@@ -988,18 +991,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/import_datasift_tweets.rb">
+    <entry file="file://$PROJECT_DIR$/spec/fixtures/datasift_sample.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="1305">
-          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/fixtures/datasift_sample_delete.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="435">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3960">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1014,8 +1009,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/datasift_json_parser.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5659164" vertical-offset="413" max-vertical-offset="1140">
-          <caret line="51" column="52" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1140">
+          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/fixtures/datasift_sample_delete.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="435">
+          <caret line="17" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/import_datasift_tweets.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37299034" vertical-offset="203" max-vertical-offset="1395">
+          <caret line="28" column="114" selection-start-line="28" selection-start-column="114" selection-end-line="28" selection-end-column="148" />
           <folding />
         </state>
       </provider>

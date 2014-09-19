@@ -74,6 +74,8 @@ gem 'iron_mq'
 # datasift
 gem 'datasift'
 
+gem 'geocoder'
+
 # Gem to import records without the delay in Activerecord
 gem 'activerecord-import'
 

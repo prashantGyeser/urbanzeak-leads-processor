@@ -16,5 +16,13 @@ class KeywordChecker
     homonyms = ['salsa']
     homonyms.any? { |w| tweet_text.downcase =~ /#{w}/ }
   end
+
+  def self.word_in_tweet?(tweet_text, word)
+    if tweet_text.downcase.match(/\b#{Regexp.escape(word)}\b/)
+      return true
+    end
+    return false
+  end
+
 end
 

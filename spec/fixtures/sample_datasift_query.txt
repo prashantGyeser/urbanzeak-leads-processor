@@ -1,0 +1,29 @@
+(
+
+twitter.text contains_any "beer"
+
+OR
+
+twitter.text contains_any "shots"
+
+OR
+
+twitter.text contains_any "party"
+
+OR
+
+twitter.text contains_any "cocktails"
+
+) AND (
+
+twitter.user.location contains_any "Chicago"
+
+OR
+
+twitter.place.full_name contains_any "Chicago"
+
+OR
+
+twitter.geo geo_radius "41.89,-87.72:33"
+
+)

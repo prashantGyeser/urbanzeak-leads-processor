@@ -36,4 +36,8 @@ class DatasiftCalls
     @datasift.push.log
   end
 
+  def valid_csdl?(csdl)
+    @datasift.valid?(csdl)
+  end
+
 end

@@ -107,6 +107,7 @@ GEM
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
+    geocoder (1.2.5)
     hike (1.2.3)
     honeybadger (1.16.3)
       json
@@ -284,6 +285,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   figaro
+  geocoder
   honeybadger
   iron_mq
   jbuilder (~> 2.0)

@@ -48,7 +48,6 @@ class BayesianClassifier
         unprocessed_lead_attributes.delete('id')
 
         if datasift_subscription_for_unprocessed_lead
-
           unprocessed_lead_attributes["datasift_subscription_id"] = datasift_subscription_for_unprocessed_lead[:id]
         end
 

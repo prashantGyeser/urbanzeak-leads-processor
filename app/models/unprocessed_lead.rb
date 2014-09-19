@@ -19,6 +19,8 @@
 #  subscription_id          :string(255)
 #  klout_score              :integer
 #  lead_stream_id           :integer
+#  category_id              :integer
+#  city_id                  :integer
 #
 
 # Todo: Add columns for follower count, status count and

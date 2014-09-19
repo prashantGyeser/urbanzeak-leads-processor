@@ -50,6 +50,7 @@ Rails.application.routes.draw do
     post 'leads/move_tweet_to_nonleads'
     get 'unchecked_leads/export_as_csv'
     get 'generate_datasift_query' => 'generate_query#datasift'
+    resources :twitter_searches
   end
 
   mount Sidekiq::Web => '/sidekiq'

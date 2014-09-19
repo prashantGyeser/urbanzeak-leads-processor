@@ -1,4 +1,3 @@
-
 # == Schema Information
 #
 # Table name: unprocessed_leads
@@ -20,6 +19,8 @@
 #  subscription_id          :string(255)
 #  klout_score              :integer
 #  lead_stream_id           :integer
+#  category_id              :integer
+#  city_id                  :integer
 #
 
 require 'faker'

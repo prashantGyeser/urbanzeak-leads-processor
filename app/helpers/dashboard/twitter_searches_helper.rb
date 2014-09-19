@@ -1,0 +1,2 @@
+module Dashboard::TwitterSearchesHelper
+end

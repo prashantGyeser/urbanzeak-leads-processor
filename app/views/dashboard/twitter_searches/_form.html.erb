@@ -1,0 +1,39 @@
+<%= form_for(@dashboard_twitter_search) do |f| %>
+  <% if @dashboard_twitter_search.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dashboard_twitter_search.errors.count, "error") %> prohibited this dashboard_twitter_search from being saved:</h2>
+
+      <ul>
+      <% @dashboard_twitter_search.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="create_subscription">
+
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.collection_select :category_id, Category.all, :id, :name, {:prompt => 'Select category'}, class: "form-control" %>
+      </div>
+      <div class="col-md-6">
+        <%= f.collection_select :city_id, City.all, :id, :city_name, {:prompt => 'Select city'}, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <%= f.text_field :keyword, placeholder: "Enter ONE keyword", class: "form-control"%>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <%= f.submit "Find And Import Tweets", :class => "btn btn-primary btn-cons" %>
+      </div>
+    </div>
+
+  </div>
+
+<% end %>

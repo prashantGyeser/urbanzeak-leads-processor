@@ -2,9 +2,6 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
 
-  namespace :dashboard do
-  get 'generate_query/datasift'
-  end
 
   namespace :dashboard do
   get 'reports/index'
@@ -52,6 +49,7 @@ Rails.application.routes.draw do
     get 'leads/index'
     post 'leads/move_tweet_to_nonleads'
     get 'unchecked_leads/export_as_csv'
+    get 'generate_datasift_query' => 'generate_query#datasift'
   end
 
   mount Sidekiq::Web => '/sidekiq'

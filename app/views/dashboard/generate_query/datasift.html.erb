@@ -1,2 +1,19 @@
-<h1>Dashboard::GenerateQuery#datasift</h1>
-<p>Find me in app/views/dashboard/generate_query/datasift.html.erb</p>
+<div class="page-title">	<i class="icon-custom-left"></i>
+
+  <h3><span class="semi-bold">Generate Datasift CSDL Query</span></h3>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="grid simple">
+      <div class="grid-title no-border">
+        <h3>Query for <span class="semi-bold"><%= @keywords %></span> in <span class="semi-bold"><%= @city %></span></h3>
+      </div>
+      <div class="grid-body no-border">
+        <%= @query %>
+      </div>
+    </div>
+  </div>
+</div>
+

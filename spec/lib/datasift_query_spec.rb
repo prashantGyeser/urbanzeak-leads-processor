@@ -14,15 +14,22 @@ RSpec.describe DatasiftQuery do
   it "should return a valid datasift location query given a valid city" do
     city = "Chicago"
 
-    #expect(DatasiftQuery.get_query_for_city(city)).to eq "test"
+    expect(DatasiftQuery.get_query_for_city(city)).to eq "twitter.user.location contains_any 'Chicago' OR twitter.place.full_name contains_any 'Chicago' OR twitter.geo geo_radius '41.8781136,-87.6297982:20'"
+
   end
 
 
-  it "shoudl return a valid latitude longitude given a valid city" do
+  it "should return a valid latitude longitude given a valid city" do
     city = "Chicago"
     results = DatasiftQuery.get_lat_lon_for_city(city)
     expect(results).to eq [41.8781136, -87.6297982]
-
   end
+
+  it "should return a valid lat long given a city with two possible places" do
+    city = "nashville"
+    results = DatasiftQuery.get_lat_lon_for_city(city)
+    expect(results).to eq [36.166667, -86.783333]
+  end
+
 
 end

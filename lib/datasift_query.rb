@@ -29,8 +29,12 @@ class DatasiftQuery
   def self.get_query_for_city(city)
     profile_location = "twitter.user.location contains_any '#{city}' OR "
     places_location = "twitter.place.full_name contains_any '#{city}' OR "
-    lat_long = 'something'
-    geo_location = "twitter.geo geo_radius '#{lat_long}'"
+
+    lat_long = DatasiftQuery.get_lat_lon_for_city(city)
+    lat_long_string = lat_long.join(',')
+    geolocation = lat_long_string + ':20'
+
+    geo_location = "twitter.geo geo_radius '#{geolocation}'"
 
     return profile_location + places_location + geo_location
   end

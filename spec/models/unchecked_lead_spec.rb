@@ -22,6 +22,8 @@
 #  klout_score              :integer
 #  lead_stream_id           :integer
 #  datasift_subscription_id :integer
+#  category_id              :integer
+#  city_id                  :integer
 #
 
 require 'rails_helper'

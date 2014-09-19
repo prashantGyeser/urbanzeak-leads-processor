@@ -3,6 +3,10 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
 
   namespace :dashboard do
+  get 'generate_query/datasift'
+  end
+
+  namespace :dashboard do
   get 'reports/index'
   end
 

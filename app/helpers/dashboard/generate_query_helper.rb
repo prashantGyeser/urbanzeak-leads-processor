@@ -1,0 +1,2 @@
+module Dashboard::GenerateQueryHelper
+end

@@ -27,4 +27,15 @@
 
 class NonLeadTweetInCity < ActiveRecord::Base
   #validates_uniqueness_of :tweet_id, :scope => [:user_id]
+
+  def self.records_containing_word(word)
+    non_lead_with_word_array = []
+    NonLeadTweetInCity.find_each do |non_lead|
+      if KeywordChecker.word_in_tweet?(non_lead.tweet_body, word)
+        non_lead_with_word_array << non_lead
+      end
+    end
+    return non_lead_with_word_array
+  end
+
 end

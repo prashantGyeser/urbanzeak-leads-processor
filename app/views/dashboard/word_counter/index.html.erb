@@ -39,3 +39,67 @@
     </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="grid simple">
+      <div class="grid-title no-border">
+        <h3>Unchecked Non Leads</h3>
+        <p>
+          Got <span class="semi-bold"><%= @unchecked_non_leads_with_word.count %></span> out of a total of <span class="semi-bold"><%= NonLeadTweetInCity.count %></span> unchecked non leads
+        </p>
+      </div>
+      <div class="grid-body no-border">
+        <table class="table no-more-tables">
+          <thead>
+          <tr>
+            <th style="width:48%">Tweet</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <% @unchecked_non_leads_with_word.each do |unchecked_non_lead| %>
+            <tr>
+              <td><span class="muted"><%= unchecked_non_lead.tweet_body %></span>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="grid simple">
+      <div class="grid-title no-border">
+        <h3>Non Leads</h3>
+        <p>
+          Got <span class="semi-bold"><%= @non_leads_with_word.count %></span> out of a total of <span class="semi-bold"><%= TrainingNonLead.count %></span> non leads
+        </p>
+      </div>
+      <div class="grid-body no-border">
+        <table class="table no-more-tables">
+          <thead>
+          <tr>
+            <th style="width:48%">Tweet</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <% @non_leads_with_word.each do |non_lead| %>
+            <tr>
+              <td><span class="muted"><%= non_lead.tweet_body %></span>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

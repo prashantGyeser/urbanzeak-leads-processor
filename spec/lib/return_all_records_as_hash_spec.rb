@@ -31,11 +31,18 @@ RSpec.describe ReturnAllRecordsAsHash do
 
   end
 
-
   it "should return a valid array of hashes given a lead generated from the admin twitter api" do
     lead = create(:lead, category_id: @category.id, city_id: @city.id)
     array_of_leads = ReturnAllRecordsAsHash.array_of_leads
     expect(array_of_leads[0][:city]).to eq @city.city_name
+  end
+
+
+  it "should return a valid array of hashes given a lead generated from the admin twitter api and datasift" do
+    lead = create(:lead, category_id: @category.id, city_id: @city.id)
+    lead = create(:lead, datasift_subscription_id: @datasift_subscription[:id])
+    array_of_leads = ReturnAllRecordsAsHash.array_of_leads
+    expect(array_of_leads[1][:city]).to eq @city.city_name
   end
 
 

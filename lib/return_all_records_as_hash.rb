@@ -14,6 +14,9 @@ class ReturnAllRecordsAsHash
           city = City.find(lead.city_id)
           category = Category.find(lead.category_id)
         else
+
+          logger.debug "The datasift subscription id is: #{lead.datasift_subscription_id}"
+
           datasift_subscription = DatasiftSubscription.find(lead.datasift_subscription_id)
           category = Category.find(datasift_subscription[:category_id])
           city = City.find(datasift_subscription.city_id)
@@ -43,6 +46,8 @@ class ReturnAllRecordsAsHash
       array_of_lead_hashes << lead_hash_with_keys_to_send
 
     end
+
+    puts array_of_lead_hashes
 
     return array_of_lead_hashes
 

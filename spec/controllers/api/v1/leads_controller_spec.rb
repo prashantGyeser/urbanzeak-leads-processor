@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe Api::V1::ReportsController, :type => :controller do
+RSpec.describe Api::V1::LeadsController, :type => :controller do
 
-  describe "GET all" do
+  describe "GET index" do
     it "returns http success" do
-      get :all
+      get :index, format: :json
       expect(response).to be_success
     end
   end

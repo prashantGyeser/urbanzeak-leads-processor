@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   namespace :api , :defaults => {:format => :json} do
     namespace :v1 do
-      get "leads/index"
+      get "leads" => 'leads#index'
       get 'reports/all'
     end
   end

@@ -39,11 +39,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unchecked_lead.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="unchecked_lead.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/unchecked_lead.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5769231" vertical-offset="135" max-vertical-offset="885">
+            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="885">
               <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="non_lead_tweet_in_city.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/non_lead_tweet_in_city.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lead.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/lead.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27591974" vertical-offset="0" max-vertical-offset="598">
+              <caret line="11" column="13" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -128,7 +148,6 @@
         <option value="$PROJECT_DIR$/spec/lib/twitter_search_spec.rb" />
         <option value="$PROJECT_DIR$/lib/twitter_search.rb" />
         <option value="$PROJECT_DIR$/lib/bayesian_classifier.rb" />
-        <option value="$PROJECT_DIR$/app/models/non_lead_tweet_in_city.rb" />
         <option value="$PROJECT_DIR$/app/models/lead.rb" />
         <option value="$PROJECT_DIR$/spec/support/request_helpers.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -140,6 +159,7 @@
         <option value="$PROJECT_DIR$/log/development.log" />
         <option value="$PROJECT_DIR$/lib/return_all_records_as_hash.rb" />
         <option value="$PROJECT_DIR$/app/models/unchecked_lead.rb" />
+        <option value="$PROJECT_DIR$/app/models/non_lead_tweet_in_city.rb" />
       </list>
     </option>
   </component>
@@ -826,24 +846,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/non_lead_tweet_in_city.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75250834" vertical-offset="0" max-vertical-offset="598">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/keyword_checker.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.72742474" vertical-offset="0" max-vertical-offset="598">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/lead.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2652733" vertical-offset="0" max-vertical-offset="622">
-          <caret line="11" column="13" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -967,8 +973,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/unchecked_lead.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5769231" vertical-offset="135" max-vertical-offset="885">
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="885">
           <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/non_lead_tweet_in_city.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/lead.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27591974" vertical-offset="0" max-vertical-offset="598">
+          <caret line="11" column="13" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>

@@ -18,7 +18,7 @@ class KeywordChecker
   end
 
   def self.word_in_tweet?(tweet_text, word)
-    if tweet_text.downcase.match(/\b#{Regexp.escape(word)}\b/)
+    if tweet_text.downcase.match(/\b#{Regexp.escape(word.downcase)}\b/)
       return true
     end
     return false

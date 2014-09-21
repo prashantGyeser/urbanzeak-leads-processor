@@ -1,0 +1,41 @@
+<div class="page-title">	<i class="icon-custom-left"></i>
+  <h3>Twitter <span class="semi-bold">Search</span></h3>
+  <p>
+    <% if @word_to_check.blank? %>
+      Please put in a work in the url. Something like /dashboard/word_counter?word=word_to_check
+    <% else %>
+      Word searched for: <span class="semi-bold"><%= @word_to_check %></span>
+    <% end %>
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="grid simple">
+      <div class="grid-title no-border">
+        <h3>Leads</h3>
+        <p>
+          Got <span class="semi-bold"><%= @leads_with_word.count %></span> out of a total of <span class="semi-bold"><%= Lead.count %></span> leads
+        </p>
+      </div>
+      <div class="grid-body no-border">
+        <table class="table no-more-tables">
+          <thead>
+          <tr>
+            <th style="width:48%">Tweet</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <% @leads_with_word.each do |lead| %>
+            <tr>
+              <td><span class="muted"><%= lead.tweet_body %></span>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

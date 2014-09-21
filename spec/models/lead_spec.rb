@@ -30,5 +30,26 @@
 require 'rails_helper'
 
 RSpec.describe Lead, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it "should return an array containing the hashes of all the leads with the word" do
+    lead = create(:lead, :tweet_body => "This is a test")
+    lead_2 = create(:lead, :tweet_body => "This is another test")
+    results = Lead.records_containing_word("test")
+    expect(results[0].id).to eq lead.id
+    expect(results.count).to eq 2
+  end
+
+  it "should return a lead only if it contains a perfect match" do
+    lead = create(:lead, tweet_body: "@TheBacklogGamer But again, this wasn't some random unbiased third party.  This was people out to ruin them bothering them for answers")
+    results = Lead.records_containing_word("test")
+    expect(results.count).to eq 0
+  end
+
+  it "should return a lead even if the cases of the words do not match" do
+    lead = create(:lead, tweet_body: "@TheBacklogGamer But again, this wasn't some random unbiased third party.  This was people out to ruin them bothering them for answers")
+    results = Lead.records_containing_word("but")
+    expect(results[0].id).to eq lead.id
+  end
+
+
 end

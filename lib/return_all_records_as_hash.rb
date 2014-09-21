@@ -10,16 +10,25 @@ class ReturnAllRecordsAsHash
 
       if lead.user_id.nil?
 
-        datasift_subscription = DatasiftSubscription.find(lead.datasift_subscription_id)
-        category = Category.find(datasift_subscription[:category_id])
-        city = City.find(datasift_subscription.city_id)
+        if lead.datasift_subscription_id.nil?
+          city = City.find(lead.city_id)
+          category = Category.find(lead.category_id)
+        else
+          datasift_subscription = DatasiftSubscription.find(lead.datasift_subscription_id)
+          category = Category.find(datasift_subscription[:category_id])
+          city = City.find(datasift_subscription.city_id)
+          lead_hash_with_keys_to_send[:processor_datasift_subscription_id] = datasift_subscription.id
+        end
 
-        lead_hash_with_keys_to_send[:processor_datasift_subscription_id] = datasift_subscription.id
         lead_hash_with_keys_to_send[:city] = city.city_name
         lead_hash_with_keys_to_send[:category] = category.name
-        lead_hash_with_keys_to_send[:klout_score] = lead.klout_score
-        lead_hash_with_keys_to_send[:followers_count] = lead.followers_count
-        lead_hash_with_keys_to_send[:friends_count] = lead.friends_count
+        if lead.klout_score.nil?
+        else
+          lead_hash_with_keys_to_send[:klout_score] = lead.klout_score
+          lead_hash_with_keys_to_send[:followers_count] = lead.followers_count
+          lead_hash_with_keys_to_send[:friends_count] = lead.friends_count
+        end
+
       else
         user = User.find(lead.user_id)
         lead_hash_with_keys_to_send[:email] = user.email

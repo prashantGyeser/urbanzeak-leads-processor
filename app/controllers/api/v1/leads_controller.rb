@@ -6,6 +6,8 @@ class Api::V1::LeadsController < ApplicationController
 
     leads = ReturnAllRecordsAsHash.array_of_leads
 
+    puts leads.errors.full_messages
+
     respond_to do |format|
       format.json { render :json => leads }
     end

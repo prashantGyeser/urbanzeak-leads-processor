@@ -15,8 +15,6 @@ class ReturnAllRecordsAsHash
           category = Category.find(lead.category_id)
         else
 
-          logger.debug "The datasift subscription id is: #{lead.datasift_subscription_id}"
-
           datasift_subscription = DatasiftSubscription.find(lead.datasift_subscription_id)
           category = Category.find(datasift_subscription[:category_id])
           city = City.find(datasift_subscription.city_id)

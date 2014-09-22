@@ -26,4 +26,20 @@ namespace :check do
     end
   end
 
+  desc "Get the word count for all the words in the tweet body in the unchecked non leads table"
+  task unchecked_non_lead_word_count: :environment do
+    words = WordCounterProcessedTweets.unique_word_count_in_unchecked_non_leads
+    Hash[words.sort_by{|k, v| v}.reverse].each do |word|
+      puts word.inspect
+    end
+  end
+
+  desc "Get the word count for all the words in the tweet body in the non leads table"
+  task non_lead_word_count: :environment do
+    words = WordCounterProcessedTweets.unique_word_count_in_non_leads
+    Hash[words.sort_by{|k, v| v}.reverse].each do |word|
+      puts word.inspect
+    end
+  end
+
 end

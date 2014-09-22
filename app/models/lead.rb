@@ -31,16 +31,4 @@ require 'keyword_checker'
 
 class Lead < ActiveRecord::Base
 
-  def self.records_containing_word(word)
-    lead_with_word_array = []
-    Lead.find_each do |lead|
-      if KeywordChecker.word_in_tweet?(lead.tweet_body, word)
-        lead_with_word_array << lead
-      end
-    end
-    return lead_with_word_array
-  end
-
-
-
 end

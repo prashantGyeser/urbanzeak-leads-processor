@@ -1,14 +1,13 @@
 require 'keyword_checker'
 
-class WordCounter
+class WordCounterProcessedTweets
 
   def self.count_times_word_occurs_in_leads(word)
-    leads = Lead.all
     count = 0
-    leads.each do |lead|
+    Lead.find_each do |lead|
       if KeywordChecker.word_in_tweet?(lead.tweet_body, word)
         count = count + 1
-        puts lead.tweet_body
+        WordCounter.create(word: word, tweet_body: lead.tweet_body, tweet_type: "lead")
       end
     end
     puts "Total in leads tweet with the word are: #{count}"
@@ -16,12 +15,11 @@ class WordCounter
   end
 
   def self.count_times_word_occurs_in_non_city_leads(word)
-    leads = NonLeadTweetInCity.all
     count = 0
-    leads.each do |lead|
-      if KeywordChecker.word_in_tweet?(lead.tweet_body, word)
+    NonLeadTweetInCity.find_each do |unchecked_non_lead|
+      if KeywordChecker.word_in_tweet?(unchecked_non_lead.tweet_body, word)
         count = count + 1
-        puts lead.tweet_body
+        WordCounter.create(word: word, tweet_body: unchecked_non_lead.tweet_body, tweet_type: "unchecked_non_lead")
       end
     end
     puts "Total in NonLeadTweetInCity tweet with the word are: #{count}"
@@ -29,18 +27,17 @@ class WordCounter
   end
 
   def self.count_times_word_occurs_in_non_leads(word)
-    leads = TrainingNonLead.all
+
     count = 0
-    leads.each do |lead|
-      if KeywordChecker.word_in_tweet?(lead.tweet_body, word)
+    TrainingNonLead.find_each do |non_lead|
+      if KeywordChecker.word_in_tweet?(non_lead.tweet_body, word)
         count = count + 1
-        puts lead.tweet_body
+        WordCounter.create(word: word, tweet_body: non_lead.tweet_body, tweet_type: "non_lead")
       end
     end
     puts "Total in Non Leads Training data tweet with the word are: #{count}"
     return count
   end
-
 
 
 end

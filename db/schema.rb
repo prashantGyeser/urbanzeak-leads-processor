@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140919173441) do
+ActiveRecord::Schema.define(version: 20140922061126) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -280,6 +280,14 @@ ActiveRecord::Schema.define(version: 20140919173441) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "city_id"
+  end
+
+  create_table "word_counters", force: true do |t|
+    t.string   "word"
+    t.string   "tweet_body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "tweet_type"
   end
 
 end

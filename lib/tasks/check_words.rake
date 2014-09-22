@@ -6,7 +6,7 @@ require 'word_counter_processed_tweets'
 namespace :check do
   desc "Check if a list of words exists in the leads and non leads"
   task :word, [:word] => :environment do |task, args|
-    word_to_check = args.word.to_s
+    word_to_check = args.word.to_s.downcase
 
     word_counters = WordCounter.where(word: word_to_check)
     word_counters.destroy_all

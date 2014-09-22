@@ -40,4 +40,15 @@ class WordCounterProcessedTweets
   end
 
 
+  def self.unique_word_count_in_leads
+    word_hash = Hash.new(0)
+    Lead.find_each do |lead|
+      tweet_array = lead.tweet_body.split(' ')
+      tweet_array.each do |word|
+        word_hash[word] += 1
+      end
+    end
+    return word_hash
+  end
+
 end

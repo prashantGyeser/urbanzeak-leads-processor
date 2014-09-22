@@ -17,4 +17,13 @@ namespace :check do
     WordCounterProcessedTweets.count_times_word_occurs_in_non_leads(word_to_check)
     puts "Finished storing tweets with the word"
   end
+
+  desc "Get the word count for all the words in the tweet body in the leads table"
+  task lead_word_count: :environment do
+    words = WordCounterProcessedTweets.unique_word_count_in_leads
+    Hash[words.sort_by{|k, v| v}.reverse].each do |word|
+      puts word.inspect
+    end
+  end
+
 end

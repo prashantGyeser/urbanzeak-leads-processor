@@ -51,6 +51,7 @@ Rails.application.routes.draw do
     get 'generate_datasift_query' => 'generate_query#datasift'
     resources :twitter_searches
     get 'word_counter' => 'word_counter#index'
+    get 'word_counter/:word' => 'word_counter#show'
   end
 
   mount Sidekiq::Web => '/sidekiq'

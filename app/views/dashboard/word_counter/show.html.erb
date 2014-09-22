@@ -1,5 +1,5 @@
 <div class="page-title">	<i class="icon-custom-left"></i>
-  <h3>Word <span class="semi-bold">Counter</span></h3>
+  <h3>Word Count For <span class="semi-bold"><%= @word %></span></h3>
 </div>
 
 
@@ -14,16 +14,17 @@
         <table class="table no-more-tables">
           <thead>
           <tr>
-            <th style="width:40%">Search Terms</th>
-            <th style="width:8%">View Records</th>
+            <th style="width:40%">Tweets</th>
+            <th style="width:8%">Category</th>
           </tr>
           </thead>
           <tbody>
 
-          <% @search_words.each do |search_word, tweets| %>
+          <% @tweets.each do |tweet| %>
             <tr>
-              <td><span class="muted"><%= search_word %></span>
-              <td><span><a href="<%= dashboard_word_counter_path %>/<%= search_word %>">View tweets</a></span>
+              <td><span class="muted"><%= tweet.tweet_body %></span>
+              </td>
+              <td><span class="muted"><%= tweet.tweet_type %></span>
               </td>
             </tr>
           <% end %>

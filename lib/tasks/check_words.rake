@@ -3,6 +3,10 @@ require 'word_counter_processed_tweets'
 # Usage sample
 # rake check:word[<word to check. Takes only one word>]
 
+# To run it on rake with multiple words
+# heroku run rake 'check:word["want lunch"]'
+# Make sure it is quoted properly
+
 namespace :check do
   desc "Check if a list of words exists in the leads and non leads"
   task :word, [:word] => :environment do |task, args|

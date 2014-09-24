@@ -24,6 +24,7 @@ class ImportManuallyCheckedLeads
           is_lead = row_hash.delete("is_lead")
           row_hash.delete("status")
           row_hash.delete("id")
+          row_hash.delete("id")
 
           if is_lead.downcase == "yes"
             Lead.create(row_hash)

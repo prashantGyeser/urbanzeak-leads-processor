@@ -6,6 +6,9 @@ class BayesianClassifier
   def process_all_unprocessed_leads
     bayes_classifier = StuffClassifier::Bayes.new("Leads or Nonleads")
 
+
+    
+
     puts "Beginning training"
 
     training_leads = TrainingLead.all

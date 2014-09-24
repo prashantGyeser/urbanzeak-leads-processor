@@ -30,5 +30,5 @@
 require 'keyword_checker'
 
 class Lead < ActiveRecord::Base
-  validates_uniqueness_of :tweet_id, :scope => [:subscriptions_id]
+  validates_uniqueness_of :tweet_id, :scope => [:datasift_subscription_id]
 end

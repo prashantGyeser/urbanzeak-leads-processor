@@ -6,8 +6,7 @@ class BayesianClassifier
   def process_all_unprocessed_leads
     bayes_classifier = StuffClassifier::Bayes.new("Leads or Nonleads")
 
-
-    
+    words_to_directly_remove = ['need','hungry','craving','crave']
 
     puts "Beginning training"
 
@@ -55,14 +54,13 @@ class BayesianClassifier
         end
 
         if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead
-          unchecked_lead = UncheckedLead.create(unprocessed_lead_attributes)
 
-          if unchecked_lead.errors.full_messages.first == "Tweet has already been taken"
-            Honeybadger.notify(
-                :error_class   => "UncheckedLead Exists",
-                :error_message => "UncheckedLead Exists: #{unprocessed_lead[:tweet_id]}",
-                :parameters    => {user_id: unprocessed_lead[:user_id], tweet_id: unprocessed_lead[:tweet_id]}
-            )
+          words_to_directly_remove.each do |word|
+            if KeywordChecker.word_in_tweet?(unprocessed_lead.tweet_body, word)
+              Lead.create(unprocessed_lead_attributes)
+            else
+              unchecked_lead = UncheckedLead.create(unprocessed_lead_attributes)
+            end
           end
 
         else

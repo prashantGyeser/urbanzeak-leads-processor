@@ -51,7 +51,7 @@ class BayesianClassifier
             if contains_keyword != true
               if KeywordChecker.word_in_tweet?(unprocessed_lead.tweet_body, word)
                 Lead.create(unprocessed_lead_attributes)
-                words_to_directly_remove = true
+                contains_keyword = true
               end
             end
           end
@@ -61,13 +61,12 @@ class BayesianClassifier
           end
 
         else
-
           contains_keyword = false
           words_to_directly_remove.each do |word|
             if contains_keyword != true
               if KeywordChecker.word_in_tweet?(unprocessed_lead.tweet_body, word)
                 Lead.create(unprocessed_lead_attributes)
-                words_to_directly_remove = true
+                contains_keyword = true
               end
             end
           end

@@ -11,6 +11,8 @@ class DatasiftFunctions
     begin
       subscriptions_data = datasift_calls.get_push_subscriptions
     rescue
+      puts "It is before the delete retry. Sleeping for 60 seconds..."
+      sleep(60)
       retry
     end
     subscriptions = subscriptions_data[:data][:subscriptions]
@@ -39,6 +41,8 @@ class DatasiftFunctions
         begin
           new_subscription = datasift_calls.create_push_subscription(subscription[:stream_hash], subscription[:subscription_name] )
         rescue
+          puts "It is before the create retry. Sleeping for 60 seconds..."
+          sleep(60)
           retry
         end
 

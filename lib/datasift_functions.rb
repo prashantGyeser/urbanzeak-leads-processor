@@ -8,9 +8,10 @@ class DatasiftFunctions
   def self.delete_all_subscriptions_on_datasift
 
     datasift_calls = DatasiftCalls.new
-    subscriptions = datasift_calls.get_push_subscriptions
+    subscriptions_data = datasift_calls.get_push_subscriptions
+    subscriptions = subscriptions_data[:data][:subscriptions]
     subscriptions.each do |subscription|
-      datasift_calls.delete_push_subscription(subscription[:datasift_subscription_id])
+      datasift_calls.delete_push_subscription(subscription[:datasift_subscription_id].to_s)
     end
     return true
   end

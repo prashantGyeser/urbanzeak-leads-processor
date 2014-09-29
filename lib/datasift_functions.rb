@@ -17,7 +17,6 @@ class DatasiftFunctions
     end
     subscriptions = subscriptions_data[:data][:subscriptions]
     subscriptions.each do |subscription|
-      puts subscription[:id]
       begin
       rescue
 
@@ -29,6 +28,7 @@ class DatasiftFunctions
 
   ######################################################################################################
   # Recreate all current subscriptions on the system
+  # Todo: Test this and make sure the subscription is deleted and it is moved into the archive
   ######################################################################################################
   def recreate_all_subscriptions
 
@@ -53,8 +53,17 @@ class DatasiftFunctions
           retry
         end
 
-        subscription[:datasift_subscription_id] = new_subscription[:data][:id]
-        subscription.save
+        subscription_attributes = subscription.attributes
+        subscription_attributes.delete('id')
+
+        new_datasift_subscription = DatasiftSubscription.new(subscription_attributes)
+
+        if new_datasift_subscription.save
+          subscription.destroy
+        end
+
+        #subscription[:datasift_subscription_id] = new_subscription[:data][:id]
+        #subscription.save
 
         puts "Total subscriptions created: #{count}"
         count = count + 1
@@ -63,5 +72,56 @@ class DatasiftFunctions
     end
 
   end
+
+  ######################################################################################################
+  # Create subscriptions for streams that do not have a datasift subscription
+  ######################################################################################################
+  def create_subscriptions_for_stream_without_subscription
+    datasift_calls = DatasiftCalls.new
+    subscription_data = datasift_calls.get_push_subscriptions
+    subscriptions = subscription_data[:data][:subscriptions]
+
+    datasift_subscriptions = DatasiftSubscription.all
+
+    datasift_subscriptions.each do |datasift_subscription|
+      subscription_exists = false
+      subscriptions.each do |subscription|
+        if datasift_subscription[:datasift_subscription_id] == subscription[:id]
+          subscription_exists = true
+        end
+      end
+
+      if subscription_exists != true
+        begin
+          new_subscription = datasift_calls.create_push_subscription(datasift_subscription[:stream_hash], datasift_subscription[:subscription_name] )
+          subscription_attributes = datasift_subscription.attributes
+          subscription_attributes.delete('id')
+
+          new_datasift_subscription = DatasiftSubscription.new(subscription_attributes)
+          new_datasift_subscription[:datasift_subscription_id] = new_subscription[:id]
+
+
+          if new_datasift_subscription.save
+            datasift_subscription.destroy
+          else
+            begin
+              datasift_calls.delete_push_subscription(new_subscription[:id])
+            rescue
+              puts "It is before the delete retry. Sleeping for 5 minutes..."
+              sleep(5.minutes)
+              retry
+            end
+          end
+
+        rescue
+          puts "The datasift api errored out. Going to sleep for 5 minutes..."
+          sleep(5.minutes)
+          retry
+        end
+      end
+    end
+
+  end
+
 
 end

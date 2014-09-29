@@ -1,4 +1,4 @@
-require 'datasift_calls'
+require 'datasift_functions'
 
 class Dashboard::DatsiftController < Dashboard::ApplicationController
   def subscriptions
@@ -18,15 +18,11 @@ class Dashboard::DatsiftController < Dashboard::ApplicationController
   end
 
   def recreate_all
+    datasift_functions = DatasiftFunctions.new
 
-    datasift_subscriptions = DatasiftSubscription.all
-    datasift_subscriptions.each do |subscription|
-      datasift_calls = DatasiftCalls.new
-      new_subscription = datasift_calls.create_push_subscription(subscription[:stream_hash], subscription[:subscription_name] )
-      subscription[:datasift_subscription_id] = new_subscription[:data][:id]
-      subscription.save
-    end
-    flash[:notice] = "Successfully recreated all subscriptions."
+    datasift_functions.delay.recreate_all_subscriptions
+
+    flash[:notice] = "Successfully added the recreate to the queue."
     redirect_to dashboard_datsift_subscriptions_path
   end
 

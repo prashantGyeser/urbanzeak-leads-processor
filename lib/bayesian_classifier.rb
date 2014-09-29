@@ -54,26 +54,35 @@ class BayesianClassifier
         end
 
         if bayes_classifier.classify(unprocessed_lead.tweet_body) == :lead
-
+          contains_keyword = false
           words_to_directly_remove.each do |word|
-            if KeywordChecker.word_in_tweet?(unprocessed_lead.tweet_body, word)
-              Lead.create(unprocessed_lead_attributes)
-            else
-              unchecked_lead = UncheckedLead.create(unprocessed_lead_attributes)
+            if contains_keyword != true
+              if KeywordChecker.word_in_tweet?(unprocessed_lead.tweet_body, word)
+                Lead.create(unprocessed_lead_attributes)
+                words_to_directly_remove = true
+              end
             end
           end
 
-        else
-          non_lead_tweet_in_city = NonLeadTweetInCity.create(unprocessed_lead_attributes)
-          puts non_lead_tweet_in_city[:tweet_id]
-          if non_lead_tweet_in_city.errors.full_messages.first == "Tweet has already been taken"
-            Honeybadger.notify(
-                :error_class   => "NonLeadTweetInCity Exists",
-                :error_message => "NonLeadTweetInCity Exists: #{unprocessed_lead[:tweet_id]}",
-                :parameters    => {user_id: unprocessed_lead[:user_id], tweet_id: unprocessed_lead[:tweet_id]}
-            )
+          if contains_keyword != true
+            unchecked_lead = UncheckedLead.create(unprocessed_lead_attributes)
           end
 
+        else
+
+          contains_keyword = false
+          words_to_directly_remove.each do |word|
+            if contains_keyword != true
+              if KeywordChecker.word_in_tweet?(unprocessed_lead.tweet_body, word)
+                Lead.create(unprocessed_lead_attributes)
+                words_to_directly_remove = true
+              end
+            end
+          end
+
+          if contains_keyword != true
+            non_lead_tweet_in_city = NonLeadTweetInCity.create(unprocessed_lead_attributes)
+          end
         end
 
       end

@@ -5,13 +5,14 @@ class DatasiftFunctions
   ######################################################################################################
   # Delete all the current subscriptions on datasift
   ######################################################################################################
-  def self.delete_all_subscriptions_on_datasift
+  def delete_all_subscriptions_on_datasift
 
     datasift_calls = DatasiftCalls.new
     subscriptions_data = datasift_calls.get_push_subscriptions
     subscriptions = subscriptions_data[:data][:subscriptions]
     subscriptions.each do |subscription|
-      datasift_calls.delete_push_subscription(subscription[:datasift_subscription_id].to_s)
+      puts subscription[:id]
+      datasift_calls.delete_push_subscription(subscription[:id].to_s)
     end
     return true
   end
@@ -22,14 +23,15 @@ class DatasiftFunctions
   def recreate_all_subscriptions
 
     datasift_calls = DatasiftCalls.new
+    puts "It is getting to before the delete"
 
-    subscriptions_deleted = DatasiftFunctions.delete_all_subscriptions_on_datasift
-
+    subscriptions_deleted = delete_all_subscriptions_on_datasift
+    puts "It is getting to before the delete"
     if subscriptions_deleted == true
-
+      puts "It is getting to before the create  "
       datasift_subscriptions = DatasiftSubscription.all
 
-      datasift_subscriptions.each do |datasift_subscription|
+      datasift_subscriptions.each do |subscription|
         new_subscription = datasift_calls.create_push_subscription(subscription[:stream_hash], subscription[:subscription_name] )
         subscription[:datasift_subscription_id] = new_subscription[:data][:id]
         subscription.save

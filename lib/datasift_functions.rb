@@ -10,7 +10,7 @@ class DatasiftFunctions
     datasift_calls = DatasiftCalls.new
     subscriptions = datasift_calls.get_push_subscriptions
     subscriptions.each do |subscription|
-      datasift_calls.delete_push_subscription(subscription[:id])
+      datasift_calls.delete_push_subscription(subscription[:datasift_subscription_id])
     end
     return true
   end

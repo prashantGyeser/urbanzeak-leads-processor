@@ -42,8 +42,8 @@
       <file leaf-file-name="datasift_functions.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/datasift_functions.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44533762" vertical-offset="398" max-vertical-offset="1050">
-              <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.3858521" vertical-offset="75" max-vertical-offset="1050">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -970,8 +970,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/datasift_functions.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44533762" vertical-offset="398" max-vertical-offset="1050">
-          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.3858521" vertical-offset="75" max-vertical-offset="1050">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
           <folding />
         </state>
       </provider>

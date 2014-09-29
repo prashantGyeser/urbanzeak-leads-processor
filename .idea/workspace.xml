@@ -39,11 +39,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datasift_functions.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="datasift_functions.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/datasift_functions.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63826364" vertical-offset="1313" max-vertical-offset="1995">
-              <caret line="113" column="13" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="998" max-vertical-offset="1995">
+              <caret line="78" column="58" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recreate_all_subscriptions.rake" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/recreate_all_subscriptions.rake">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.15050167" vertical-offset="0" max-vertical-offset="598">
+              <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -123,13 +133,13 @@
         <option value="$PROJECT_DIR$/spec/fixtures/sample_list_of_subscriptions_datasift.txt" />
         <option value="$PROJECT_DIR$/spec/fixtures/sample_list_of_subscriptions_datasift.rb" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/datsift_controller.rb" />
-        <option value="$PROJECT_DIR$/lib/tasks/recreate_all_subscriptions.rake" />
         <option value="$PROJECT_DIR$/spec/lib/bayesian_classifier_spec.rb" />
         <option value="$PROJECT_DIR$/lib/bayesian_classifier.rb" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/spec/lib/datasift_functions_spec.rb" />
         <option value="$PROJECT_DIR$/lib/datasift_functions.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/recreate_all_subscriptions.rake" />
       </list>
     </option>
   </component>
@@ -855,13 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/recreate_all_subscriptions.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19292605" vertical-offset="0" max-vertical-offset="622">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/bayesian_classifier.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1410">
@@ -960,8 +963,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/datasift_functions.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63826364" vertical-offset="1313" max-vertical-offset="1995">
-          <caret line="113" column="13" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="998" max-vertical-offset="1995">
+          <caret line="78" column="58" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/recreate_all_subscriptions.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15050167" vertical-offset="0" max-vertical-offset="598">
+          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
           <folding />
         </state>
       </provider>

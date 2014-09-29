@@ -8,8 +8,6 @@ class BayesianClassifier
 
     words_to_directly_remove = ['need','hungry','craving','crave']
 
-    puts "Beginning training"
-
     training_leads = TrainingLead.all
     training_leads.each do |training_lead|
       bayes_classifier.train(:lead, training_lead.tweet_body)
@@ -20,18 +18,11 @@ class BayesianClassifier
       bayes_classifier.train(:lead, manually_checked_lead.tweet_body)
     end
 
-    puts "Finished positive training"
-    puts "Beginning negative training"
     non_leads = TrainingNonLead.all
     non_leads.each do |training_nonlead|
       bayes_classifier.train(:nonlead, training_nonlead.tweet_body)
     end
-    puts "Finished negative training"
 
-    total_tweets_nyc = 0
-
-    processed_count = 1
-    puts "Beginning classification"
     UnprocessedLead.find_each do |unprocessed_lead|
       if UrlChecker.does_not_contains_url?(unprocessed_lead.tweet_body)
 
@@ -41,10 +32,6 @@ class BayesianClassifier
           datasift_subscription_for_unprocessed_lead = ReportsCollector.get_datasift_subscription(unprocessed_lead[:subscription_id])
           report = ReportsCollector.create_or_add(datasift_subscription_for_unprocessed_lead[:id], unprocessed_lead[:created_at])
         end
-
-        total_tweets_nyc = total_tweets_nyc + 1
-        puts unprocessed_lead.user_location
-        puts "Total tweets: #{total_tweets_nyc}"
 
         unprocessed_lead_attributes = unprocessed_lead.attributes
         unprocessed_lead_attributes.delete('id')
@@ -88,12 +75,11 @@ class BayesianClassifier
       end
 
       unprocessed_lead.destroy
-      processed_count = processed_count + 1
     end
 
 
   end
   # Todo: Enable this after writing the tests for this class
-  handle_asynchronously :process_all_unprocessed_leads
+  #handle_asynchronously :process_all_unprocessed_leads
 
 end

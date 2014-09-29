@@ -18,8 +18,10 @@ class DatasiftFunctions
     subscriptions = subscriptions_data[:data][:subscriptions]
     subscriptions.each do |subscription|
       puts subscription[:id]
-      puts "Sleeping...."
-      sleep(60.minutes)
+      begin
+      rescue
+
+      end
       datasift_calls.delete_push_subscription(subscription[:id].to_s)
     end
     return true

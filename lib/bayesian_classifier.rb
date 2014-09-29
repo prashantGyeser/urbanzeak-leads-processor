@@ -30,9 +30,12 @@ class BayesianClassifier
           # Todo: Add code to handle this when it comes from a lead stream
         else
           datasift_subscription_for_unprocessed_lead = ReportsCollector.get_datasift_subscription(unprocessed_lead[:subscription_id])
-          puts "The value in the datasift subscription is: #{datasift_subscription_for_unprocessed_lead[:id]}"
-          puts "the value in the created at is: #{unprocessed_lead[:created_at]}"
-          report = ReportsCollector.create_or_add(datasift_subscription_for_unprocessed_lead[:id], unprocessed_lead[:created_at])
+
+          if datasift_subscription_for_unprocessed_lead != false
+            report = ReportsCollector.create_or_add(datasift_subscription_for_unprocessed_lead[:id], unprocessed_lead[:created_at])
+          else
+            # Todo: Add code to handle this when it comes from a lead stream
+          end
         end
 
         unprocessed_lead_attributes = unprocessed_lead.attributes

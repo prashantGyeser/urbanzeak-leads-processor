@@ -18,6 +18,8 @@ class DatasiftFunctions
     subscriptions = subscriptions_data[:data][:subscriptions]
     subscriptions.each do |subscription|
       puts subscription[:id]
+      puts "Sleeping...."
+      sleep(2.minutes)
       datasift_calls.delete_push_subscription(subscription[:id].to_s)
     end
     return true
@@ -40,6 +42,8 @@ class DatasiftFunctions
       count = 1
       datasift_subscriptions.each do |subscription|
         begin
+          puts "Sleeping...."
+          sleep(2.minutes)
           new_subscription = datasift_calls.create_push_subscription(subscription[:stream_hash], subscription[:subscription_name] )
         rescue
           puts "It is before the create retry. Sleeping for 5 minutes..."

@@ -8,7 +8,11 @@ class DatasiftFunctions
   def delete_all_subscriptions_on_datasift
 
     datasift_calls = DatasiftCalls.new
-    subscriptions_data = datasift_calls.get_push_subscriptions
+    begin
+      subscriptions_data = datasift_calls.get_push_subscriptions
+    rescue
+      retry
+    end
     subscriptions = subscriptions_data[:data][:subscriptions]
     subscriptions.each do |subscription|
       puts subscription[:id]
@@ -32,7 +36,12 @@ class DatasiftFunctions
       datasift_subscriptions = DatasiftSubscription.all
 
       datasift_subscriptions.each do |subscription|
-        new_subscription = datasift_calls.create_push_subscription(subscription[:stream_hash], subscription[:subscription_name] )
+        begin
+          new_subscription = datasift_calls.create_push_subscription(subscription[:stream_hash], subscription[:subscription_name] )
+        rescue
+          retry
+        end
+
         subscription[:datasift_subscription_id] = new_subscription[:data][:id]
         subscription.save
       end

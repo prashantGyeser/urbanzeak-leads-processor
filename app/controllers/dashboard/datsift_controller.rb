@@ -22,7 +22,6 @@ class Dashboard::DatsiftController < Dashboard::ApplicationController
     datasift_subscriptions = DatasiftSubscription.all
     datasift_subscriptions.each do |subscription|
       datasift_calls = DatasiftCalls.new
-      datasift_calls.delete_push_subscription(subscription[:datasift_subscription_id])
       new_subscription = datasift_calls.create_push_subscription(subscription[:stream_hash], subscription[:subscription_name] )
       subscription[:datasift_subscription_id] = new_subscription[:data][:id]
       subscription.save

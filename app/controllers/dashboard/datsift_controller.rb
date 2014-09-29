@@ -17,4 +17,24 @@ class Dashboard::DatsiftController < Dashboard::ApplicationController
     @logs = datasift.get_logs
   end
 
+  def recreate_all
+    begin
+      datasift_subscriptions = DatasiftSubscription.all
+      datasift_subscriptions.each do |subscription|
+        datasift_calls.delete_push_subscription(subscription[:datasift_subscription_id])
+        new_subscription = datasift_calls.create_push_subscription(subscription[:stream_hash], subscription[:subscription_name] )
+        subscription[:datasift_subscription_id] = new_subscription[:data][:id]
+        subscription.save
+      end
+      flash[:notice] = "Successfully recreated all subscriptions."
+      redirect_to dashboard_datsift_subscriptions_path
+    rescue e
+      Honeybadger.notify(
+          :error_class   => "Datasift recreate all error",
+          :error_message => "Datasift recreate all error: #{e.message}",
+          :parameters    => datasift_subscriptions
+      )
+    end
+  end
+
 end

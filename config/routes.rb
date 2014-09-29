@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :datasift_subscriptions
 
   namespace :dashboard do
-  get 'datsift/subscriptions'
+
   end
 
   namespace :dashboard do
@@ -52,6 +52,8 @@ Rails.application.routes.draw do
     resources :twitter_searches
     get 'word_counter' => 'word_counter#index'
     get 'word_counter/:word' => 'word_counter#show'
+    get 'datsift/subscriptions'
+    get 'datsift/recreate_all'
   end
 
   mount Sidekiq::Web => '/sidekiq'

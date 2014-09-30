@@ -62,8 +62,8 @@
       <file leaf-file-name="return_all_records_as_hash.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/return_all_records_as_hash.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49665552" vertical-offset="228" max-vertical-offset="1575">
-              <caret line="35" column="63" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.5719063" vertical-offset="138" max-vertical-offset="1590">
+              <caret line="32" column="96" selection-start-line="32" selection-start-column="96" selection-end-line="32" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -973,8 +973,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/return_all_records_as_hash.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49665552" vertical-offset="228" max-vertical-offset="1575">
-          <caret line="35" column="63" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.5719063" vertical-offset="138" max-vertical-offset="1590">
+          <caret line="32" column="96" selection-start-line="32" selection-start-column="96" selection-end-line="32" selection-end-column="96" />
           <folding />
         </state>
       </provider>

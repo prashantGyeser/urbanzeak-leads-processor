@@ -10,7 +10,7 @@ class ReturnAllRecordsAsHash
 
       if lead.user_id.nil?
 
-        if lead.datasift_subscription_id.nil?
+        if lead.datasift_subscription_id.nil? && lead.datasift_stream_hash.nil?
           city = City.find(lead.city_id)
           category = Category.find(lead.category_id)
         else

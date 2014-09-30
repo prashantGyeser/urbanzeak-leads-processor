@@ -15,7 +15,17 @@ class ReturnAllRecordsAsHash
           category = Category.find(lead.category_id)
         else
 
-          datasift_subscription = DatasiftSubscription.find(lead.datasift_subscription_id)
+          if DatasiftSubscription.where(id: lead.datasift_subscription_id).blank?
+            if DatasiftSubscription.where(stream_hash: lead.datasift_stream_hash ).blank?
+              datasift_subscription = DeletedDatasiftSubscription.find_by_stream_hash(lead.datasift_stream_hash)
+            else
+              datasift_subscription = DatasiftSubscription.find_by_stream_hash(lead.datasift_stream_hash)
+            end
+          else
+            datasift_subscription = DatasiftSubscription.find(lead.datasift_subscription_id)
+          end
+
+
           category = Category.find(datasift_subscription[:category_id])
           city = City.find(datasift_subscription.city_id)
           lead_hash_with_keys_to_send[:processor_datasift_subscription_id] = datasift_subscription.id

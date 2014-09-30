@@ -25,10 +25,18 @@ class ReturnAllRecordsAsHash
             datasift_subscription = DatasiftSubscription.find(lead.datasift_subscription_id)
           end
 
+          begin
+            category = Category.find(datasift_subscription[:category_id])
+            city = City.find(datasift_subscription.city_id)
+            lead_hash_with_keys_to_send[:processor_datasift_subscription_id] = datasift_subscription.id
+          rescue RecordNotFound => e
+            Honeybadger.notify(
+                :error_class   => "Lead hash create error",
+                :error_message => "Lead hash create error: #{e}",
+                :parameters    => {city_id: datasift_subscription.city_id, category_id: datasift_subscription[:category_id]}
+            )
+          end
 
-          category = Category.find(datasift_subscription[:category_id])
-          city = City.find(datasift_subscription.city_id)
-          lead_hash_with_keys_to_send[:processor_datasift_subscription_id] = datasift_subscription.id
         end
 
         lead_hash_with_keys_to_send[:city] = city.city_name

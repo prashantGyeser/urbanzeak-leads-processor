@@ -15,7 +15,7 @@ class Api::V1::LeadStreamController < ApplicationController
     end
 
     respond_to do |format|
-      format.json { render :json => "Created sucessfully" }
+      format.json { render :json => "Created successfully" }
     end
 
 

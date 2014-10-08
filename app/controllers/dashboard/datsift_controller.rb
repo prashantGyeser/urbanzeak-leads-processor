@@ -1,11 +1,16 @@
 require 'datasift_functions'
+require 'datasift_query'
 
 class Dashboard::DatsiftController < Dashboard::ApplicationController
   def subscriptions
     datasift_call = DatasiftCalls.new
     subscriptions = datasift_call.get_push_subscriptions
     @all_subscriptions = subscriptions[:data][:subscriptions]
+
     @datasift_subscription = DatasiftSubscription.new
+
+
+
     @subscriptions = DatasiftSubscription.all
   end
 

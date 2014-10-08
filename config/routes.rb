@@ -3,6 +3,10 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
 
   namespace :dashboard do
+  get 'frontend_streams/index'
+  end
+
+  namespace :dashboard do
   get 'reports/index'
   end
 
@@ -54,6 +58,7 @@ Rails.application.routes.draw do
     get 'word_counter' => 'word_counter#index'
     get 'word_counter/:word' => 'word_counter#show'
     get 'datsift/subscriptions'
+    get 'datsift/subscriptions/:unique_stream_id' => 'datsift#subscriptions'
     get 'datsift/recreate_all'
   end
 

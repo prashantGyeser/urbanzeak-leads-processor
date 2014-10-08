@@ -1,0 +1,43 @@
+<div class="page-title">	<i class="icon-custom-left"></i>
+  <h3>Frontend <span class="semi-bold">Streams</span></h3>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="grid simple">
+      <div class="grid-title no-border">
+        <h3>All frontend streams</h3>
+      </div>
+      <div class="grid-body no-border">
+
+        <table class="table no-more-tables">
+          <thead>
+          <tr>
+            <th style="width:5%">Id</th>
+            <th style="width:33%">Lead Stream</th>
+            <th style="width:10%"></th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <% @unique_lead_streams.each do |unique_lead_stream| %>
+            <tr>
+              <td><span class="muted"><%= unique_lead_stream.id %></span>
+              <td>
+                <% city = City.find(unique_lead_stream.city_id) %>
+                <% category = Category.find(unique_lead_stream.category_id) %>
+                <%= category.name.split.map(&:capitalize).join(' ') %> in <%= city.city_name.split.map(&:capitalize).join(' ') %>
+              </td>
+              <td>
+                <a href="#" class="btn btn-primary btn-cons">Create Stream</a>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

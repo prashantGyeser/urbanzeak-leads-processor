@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get "leads" => 'leads#index'
       get 'reports/all'
+      post 'lead_streams' => 'lead_stream#create_many'
     end
   end
 

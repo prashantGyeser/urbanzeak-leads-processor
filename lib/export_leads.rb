@@ -9,15 +9,18 @@ class ExportLeads
 
     frontend_server_url = ENV['FRONTEND_SERVER_URL'] + '/api/v1/leads/batch_create'
 
+    puts "It is getting to just before the post"
+
     response = HTTParty.post(frontend_server_url,
                              :body => unsent_leads.to_json,
                              :headers => { 'Content-Type' => 'application/json' })
 
+    puts "Finished posting"
 
     case response.code
       when 200
         puts "All good!"
-        Lead.update_all(:sent => true)
+        #Lead.update_all(:sent => true)
       when 404
         puts "Not found!"
       when 500...600

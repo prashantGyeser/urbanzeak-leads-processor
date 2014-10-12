@@ -34,7 +34,7 @@ class ExportLeads
 
   def self.get_unsent_leads
     return_all_records_as_hash = ReturnAllRecordsAsHash.new
-    return return_all_records_as_hash.leads_array_in_batches(1000)
+    return return_all_records_as_hash.leads_array_in_batches(10)
   end
 
 end

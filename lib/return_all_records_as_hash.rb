@@ -72,7 +72,8 @@ class ReturnAllRecordsAsHash
 
 
   def leads_array_in_batches(batch_size)
-    leads = Lead.where(sent: nil).first(batch_size)
+    time_range = (1.days.ago..Time.now)
+    leads = Lead.where(created_at: time_range)
 
     array_of_lead_hashes = []
 

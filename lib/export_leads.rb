@@ -17,6 +17,9 @@ class ExportLeads
 
     puts "Finished posting"
 
+    puts "The response is: #{response.inspect}"
+
+
     case response.code
       when 200
         puts "All good!"

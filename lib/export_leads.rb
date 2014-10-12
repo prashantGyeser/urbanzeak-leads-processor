@@ -7,7 +7,7 @@ class ExportLeads
 
     puts "The server being connected to id: #{ENV['FRONTEND_SERVER_URL']}"
 
-    frontend_server_url = ENV['FRONTEND_SERVER_URL'] + '/api/v1/leads/batch_create.json'
+    frontend_server_url = ENV['FRONTEND_SERVER_URL'] + '/api/v1/leads/batch_create'
 
     puts "It is getting to just before the post: #{frontend_server_url}"
 
@@ -34,7 +34,7 @@ class ExportLeads
 
   def self.get_unsent_leads
     return_all_records_as_hash = ReturnAllRecordsAsHash.new
-    return return_all_records_as_hash.leads_array_in_batches(10)
+    return return_all_records_as_hash.leads_array_in_batches(Lead.where(sent: nil).count)
   end
 
 end

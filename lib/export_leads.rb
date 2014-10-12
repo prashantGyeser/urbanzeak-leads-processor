@@ -9,7 +9,7 @@ class ExportLeads
 
     frontend_server_url = ENV['FRONTEND_SERVER_URL'] + '/api/v1/leads/batch_create.json'
 
-    puts "It is getting to just before the post"
+    puts "It is getting to just before the post: #{frontend_server_url}"
 
     response = HTTParty.post(frontend_server_url,
                              :body => unsent_leads.to_json,

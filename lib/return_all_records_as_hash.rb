@@ -72,8 +72,7 @@ class ReturnAllRecordsAsHash
 
 
   def leads_array_in_batches(batch_size)
-    time_range = (1.days.ago..Time.now)
-    leads = Lead.where(created_at: time_range)
+    leads = Lead.where(sent: nil).first(batch_size)
 
     array_of_lead_hashes = []
 
@@ -133,6 +132,10 @@ class ReturnAllRecordsAsHash
       lead_hash_with_keys_to_send[:tweet_id] = lead.tweet_id
 
       array_of_lead_hashes << lead_hash_with_keys_to_send
+
+      lead.sent = true
+      lead.save
+
     end
 
 

@@ -7,7 +7,7 @@ class ExportLeads
 
     puts "The server being connected to id: #{ENV['FRONTEND_SERVER_URL']}"
 
-    frontend_server_url = ENV['FRONTEND_SERVER_URL'] + '/api/v1/leads/batch_create'
+    frontend_server_url = ENV['FRONTEND_SERVER_URL'] + '/api/v1/leads/batch_create.json'
 
     puts "It is getting to just before the post"
 

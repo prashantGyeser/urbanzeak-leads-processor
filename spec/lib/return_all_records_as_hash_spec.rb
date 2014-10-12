@@ -45,5 +45,20 @@ RSpec.describe ReturnAllRecordsAsHash do
     expect(array_of_leads[1][:city]).to eq @city.city_name
   end
 
+  it "should return the results based on the batch size specified" do
+    lead = create(:lead, user_id: @user[:id])
+    return_all_records_as_hash = ReturnAllRecordsAsHash.new
+    array_of_leads = return_all_records_as_hash.leads_array_in_batches(1)
+    expect(array_of_leads[0][:email]).to eq @user.email
+  end
+
+  it "should return an array only containing the number of records specified" do
+    create(:lead, user_id: @user[:id])
+
+    return_all_records_as_hash = ReturnAllRecordsAsHash.new
+    array_of_leads = return_all_records_as_hash.leads_array_in_batches(1)
+    expect(array_of_leads.count).to eq 1
+  end
+
 
 end

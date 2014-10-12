@@ -191,6 +191,7 @@
     <orderEntry type="library" scope="PROVIDED" name="honeybadger (v1.16.3, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="http (v0.6.2, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="http_parser.rb (v0.6.0, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="httparty (v0.13.1, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.11, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="iron_core (v1.0.4, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="iron_mq (v5.0.1, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
@@ -202,6 +203,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.6.0, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.4.0, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.10.1, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_xml (v0.5.5, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multipart-post (v2.0.0, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="naught (v1.0.0, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-http-persistent (v2.9.4, RVM: ruby-2.1.2 [urbanzeak-leads-processor]) [gem]" level="application" />

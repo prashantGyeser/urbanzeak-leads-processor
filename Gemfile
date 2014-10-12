@@ -79,6 +79,9 @@ gem 'geocoder'
 # Gem to import records without the delay in Activerecord
 gem 'activerecord-import'
 
+gem 'httparty'
+
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem "better_errors"
